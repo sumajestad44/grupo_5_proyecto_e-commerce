@@ -12,7 +12,7 @@ https://trello.com/b/iL2sVSnh/proyecto-e-commerce
 ## Equipo 
 - Ana Rial
 - Ignacio Biglieri
-- Sumaj Moreno
+- Sumaj Coronel
 
 ## Temática 
 Nuestro servicio se basa en suscripciones por las cuales logramos acercar selecciones de yerba mate para la degustación y el consumo responsable de este producto. El público apunta a aquellos que buscan una mejor experiencia y nuevos sabores para acompañar cada momento.
