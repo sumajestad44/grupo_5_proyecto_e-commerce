@@ -1,6 +1,6 @@
 # Proyecto E-commerce
 
-# Wireframes
+## Wireframes
 
 ### Desktop View: https://www.figma.com/file/LJN6kJFxywiDzXJa0vUw3t/Desktop?node-id=0%3A1
 
