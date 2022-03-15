@@ -1,0 +1,29 @@
+# Proyecto E-commerce
+
+## Trello 
+https://trello.com/b/iL2sVSnh/proyecto-e-commerce
+
+## Equipo 
+- Ana Rial
+- Ignacio Biglieri
+- Sumaj Moreno
+
+## Temática 
+Nuestro servicio se basa en suscripciones por las cuales logramos acercar selecciones de yerba mate para la degustación y el consumo responsable de este producto. El público apunta a aquellos que buscan una mejor experiencia y nuevos sabores para acompañar cada momento.
+
+## Inspiración 
+
+### [Club de Café](https://somosclubdecafe.com/)
+Nos inspiramos principalmente en el contenido de esta página ya que ofrece el mismo modelo de servicio, manteniéndose simple y ordenado.
+
+### [The Coffee Box](https://thecoffeebox.com.ar/)
+Referencia de diseño, destacamos la facilidad para navegarla.
+
+### [Manifiesto Cafetero](https://manifiestocafe.com.ar/)
+Inspiración en logos e imágenes.
+
+### [Café Registrado](https://www.caferegistrado.com/)
+Tiene un buen diseño donde cada sección se distingue bien y es sencilla de usar.
+
+### [A Book Apart](https://abookapart.com/)
+Nos gusta sus animaciones y la armonía de su diseño.
