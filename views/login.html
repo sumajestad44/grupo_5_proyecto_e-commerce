@@ -18,10 +18,13 @@
     <main class="login">
         <form action="/" method="POST">
             <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" required>
+            <input type="text" name="nombre" id="nombre" required>
             <label for="pass">Contraseña: </label>
-            <input type="password" name="pass" minlength="8" required>
-            <input type="radio" name="recordarUsuario" value="recordarUsuario"><p>Recordar usuario</p>
+            <input type="password" name="pass" id="pass" minlength="8" required> 
+            <div class="recordarUsuario">
+            <input type="radio" name="recordarUsuario" id="recordarUsuario">
+            <label for="recordarUsuario">Recordar usuario </label>
+            </div>
             <a href="">¿Olvidaste tu contraseña?</a>
             <input class="btn" type="submit" value="Iniciar sesión">
             <a href="/register">¿Aún no tenés cuenta?</a>
