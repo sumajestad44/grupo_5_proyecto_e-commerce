@@ -1,5 +1,11 @@
 # Proyecto E-commerce
 
+# Wireframes
+
+### Desktop View: https://www.figma.com/file/LJN6kJFxywiDzXJa0vUw3t/Desktop?node-id=0%3A1
+
+### Phone View: https://www.figma.com/file/zxQyGFB9zEP0eglcRluy7P/Phone?node-id=0%3A1
+
 ## Trello 
 https://trello.com/b/iL2sVSnh/proyecto-e-commerce
 
