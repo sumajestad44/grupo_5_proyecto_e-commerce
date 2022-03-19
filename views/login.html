@@ -17,17 +17,27 @@
     
     <main class="login">
         <form action="/" method="POST">
-            <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" id="nombre" required>
-            <label for="pass">Contraseña: </label>
-            <input type="password" name="pass" id="pass" minlength="8" required> 
-            <div class="recordarUsuario">
-            <input type="checkbox" name="recordarUsuario" id="recordarUsuario">
-            <label for="recordarUsuario">Recordar usuario </label>
+            <div class="datos-usuario-login">
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" required>
+                <label for="pass">Contraseña: </label>
+                <input type="password" name="pass" id="pass" minlength="8" required> 
             </div>
-            <a href="">¿Olvidaste tu contraseña?</a>
-            <input class="btn" type="submit" value="Iniciar sesión">
-            <a href="/register">¿Aún no tenés cuenta?</a>
+            <div class="container-login">
+                <div class="recordarUsuario">
+                    <input type="checkbox" name="recordarUsuario" id="recordarUsuario">
+                    <label for="recordarUsuario">Recordar usuario </label>
+                </div>
+                <div class="forgotten">
+                    <a href="">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="buttons">
+                    <input class="btn" type="submit" value="Iniciar sesión">
+                </div>
+                <div class="red-login">
+                    <a href="/register">¿Aún no tenés cuenta?</a>
+                </div>
+            </div>
         </form>
     </main>
 
