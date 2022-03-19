@@ -16,9 +16,17 @@
     border: none;
     margin: 0.7em 0;
 }
+.datos-usuario-register{
+    display: flex;
+    font-size: var(--text-lg);
+    flex-direction: column;
+}
 .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2em;
+}
+.red-register{
+    font-size: var(--text-s-sm);
 }
