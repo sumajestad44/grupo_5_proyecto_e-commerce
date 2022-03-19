@@ -1,19 +1,47 @@
+main {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    display: block;
+}
 .login{
     padding-top: 1.6em;
-    background-color: #DEDEDE;
+    background-color: var(--white-grey);
+    height: 100%;
 }
 .login form {
     width: 60%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 .login form input {
      padding: 10px; 
      border-radius: 5px; 
      border: none;
 }
+.login form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 0.7em 0;
+}
+.datos-usuario-login{
+    display: flex;
+    font-size: var(--text-lg);
+    flex-direction: column;
+}
+.recordarUsuario{
+    font-size: var(--text-md);
+}
+.forgotten{
+    font-size: var(--text-s-sm);
+}
+.red-login{
+    font-size: var(--text-s-sm);
+}
+
 .btn {
     background-color: blue;
     color: #FFF;
@@ -23,7 +51,7 @@
     
 }
 .btn:hover{
-    background-color: var(--azul-claro);
+    background-color: var();
 }
 
 .recordarUsuario{
