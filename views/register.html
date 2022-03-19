@@ -14,21 +14,25 @@
 
     <main class="register">
         <form action="/" method="POST">
-            <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" id="nombre" required>
-            <label for="apellido">Apellido: </label>
-            <input type="text" name="apellido" id="apellido" required>
-            <label for="email">Correo electrónico: </label>
-            <input type="email" name="email" id="email" required>
-            <label for="pass">Contraseña: </label>
-            <input type="password" name="pass" id="pass" minlength="8" required>
-            <label for="pass_confirm">Contraseña (confirmación): </label>
-            <input type="password" name="pass_confirm" id="pass_confirm" minlength="8" required>
+            <div class="datos-usuario-register">
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" required>
+                <label for="apellido">Apellido: </label>
+                <input type="text" name="apellido" id="apellido" required>
+                <label for="email">Correo electrónico: </label>
+                <input type="email" name="email" id="email" required>
+                <label for="pass">Contraseña: </label>
+                <input type="password" name="pass" id="pass" minlength="8" required>
+                <label for="pass_confirm">Contraseña (confirmación): </label>
+                <input type="password" name="pass_confirm" id="pass_confirm" minlength="8" required>
+            </div>
 <br>
             <div class="buttons">
                 <input class="btn" type="submit" value="Registrarse">
             </div>
-            <a href="/login">¿Ya tenés una cuenta?</a>
+            <div class="red-register">
+                <a href="/login">¿Ya tenés una cuenta?</a>
+            </div>
             <br>
             <br>
         </form>
