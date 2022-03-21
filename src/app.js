@@ -12,3 +12,5 @@ app.get('/login', (req, res) => res.sendFile(path.resolve(__dirname, './views/lo
 app.get('/register', (req, res) => res.sendFile(path.resolve(__dirname, './views/register.html')));
 app.get('/cart', (req, res) => res.sendFile(path.resolve(__dirname, './views/productCart.html')));
 app.get('/detail', (req, res) => res.sendFile(path.resolve(__dirname, './views/productDetail.html')));
+
+app.set('view engine', 'ejs');
