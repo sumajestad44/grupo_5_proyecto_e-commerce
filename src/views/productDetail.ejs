@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
 
   <%- include('./partials/head') %> 
+
+</head>
 
 <body>
 
     <%- include('./partials/header') %> 
 
-  <main class="productDetail">
+<main>
+<div class="productDetail">
     <div class="imgproducto">
       <img src="/images/default-image.jpg">
     </div>
-    <div class="text-detail">
-      <h2>Nombre del producto</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Quo aperiam corporis, natus aliquam sit omnis labore quam eius autem temporibus
-         laudantium praesentium illo aspernatur eos eligendi aliquid excepturi quas ex!</p> 
+    <div class="product">
+        <div class="text-detail">
+            <h2>Nombre del producto</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Quo aperiam corporis, natus aliquam sit omnis labore quam eius autem temporibus
+             laudantium praesentium illo aspernatur eos eligendi aliquid excepturi quas ex!</p> 
+        </div>
+        <div class="select-weight">
+            <p>$</p><select name="" class="weight"> 
+                        <option value="none"> Seleccionar peso</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+            <input type="submit" value="Agregar al carrito" class="button">
+        </div>
     </div>
-      <div class="select-and-button">
-         <p>$</p><select name="" id=""> 
-            <option value="none"> Seleccionar peso</option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-          </select>
-        <input type="submit" value="Agregar al carrito">
-      </div>
-      <div class="productos-similares">
+</div>  
+<hr>
+    <div class="similar">
         <h2>Productos similares</h2>
-        <div class="img-productos-similares">
+        <div class="img-similar">
           <img src="/images/default-image.jpg">
           <img src="/images/default-image.jpg">
           <img src="/images/default-image.jpg">
           <img src="/images/default-image.jpg">
         </div>
-      </div>
-    </main>
+    </div>
+</main>
 </body>
 </html>
