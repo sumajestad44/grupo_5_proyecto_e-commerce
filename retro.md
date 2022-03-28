@@ -14,3 +14,8 @@
 - Comenzar a: reunirnos de forma weekly y adelantar la próxima entrega.
 - Continuar: viendo con anticipación las clases de playground y tomar apuntes.
 - Dejar de: entregar el último día.
+
+## Sprint 4 - JSON y métodos HTTP
+- Comenzar a: dedicar un lapso de tiempo a corregir errores.
+- Continuar: organizando reuniones para tratar avances y dudas.
+- Dejar de: realizar las tareas a medias.
