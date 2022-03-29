@@ -8,6 +8,7 @@ main {
     padding-top: 1.6em;
     background-color: var(--white-grey);
     height: 100%;
+    margin-top: 100px;
 }
 .login form {
     width: 60%;
