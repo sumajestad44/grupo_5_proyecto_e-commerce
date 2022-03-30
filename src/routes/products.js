@@ -22,4 +22,11 @@ var upload= multer({
 router.get('/create', productsController.create); 
 router.post('/', upload.any(), productsController.store); 
 
+/*** EDITAR UN PRODUCTO ***/
+router.get('/edit/:id', productsController.edit);
+router.patch('/edit/:id', upload.any(), productsController.update);
+
+
+
+
 module.exports = router;

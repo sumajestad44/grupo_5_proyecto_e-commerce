@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %> 
+    <link rel="stylesheet" href="/css/styles.css">
 <body>
     <%- include('./partials/header') %> 
 
+   <form action="/products/edit<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+        <div class="productDetail">
+            <div class="img-producto">
+                <label for="product-image">Imágen del producto: </label>
+                <input type="file" name="product-image" id="product-image">
+            </div>
+            <div class="product">
+                <div class="text-detail">
+                    <label for="name"><h2>Nombre del producto:</h2></label>
+                    <input type="text" name="name" id="name">
+                    <label for="description">Descripción del producto:</label>
+                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                </div>
+                <div class="select-weight">
+                    <label for="precio">Precio: </label>
+                    <input type="text" name="price" id="price">
+                </div>
+                <input type="submit" value="Guardar producto" class="button-detail">
+            </div>
+        </div>  
+    </form>
     
     
 
