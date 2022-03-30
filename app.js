@@ -1,10 +1,18 @@
-const express = require('express');
+/*const express = require('express');
 const app = express();
 const path = require('path');
+const logger = require('morgan')
+const cookieParser = require('cookie-parser');
+const createError = require('http-errors');
+
+/* DEFINIENDO RUTAS Y REQUIRIENDO */ /*
 const routes = require('./src/routes/main');
 const productsRoutes = require('./src/routes/products');
 const usersRoutes = require('./src/routes/users');
 
+app.use(logger('dev'));
+app.use(express.json());
+app.use(cookieParser());
 const methodOverride = require('method-override');
 app.use(methodOverride  ('_method'));
 
@@ -16,18 +24,14 @@ app.use(express.urlencoded({extended: false }));
 
 app.listen(3000, () => console.log('Servidor corriendo en puerto 3000'));
 
-/*
-app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, './views/home.html')));
-app.get('/login', (req, res) => res.sendFile(path.resolve(__dirname, './views/login.html')));
-app.get('/register', (req, res) => res.sendFile(path.resolve(__dirname, './views/register.html')));
-app.get('/cart', (req, res) => res.sendFile(path.resolve(__dirname, './views/productCart.html')));
-app.get('/detail', (req, res) => res.sendFile(path.resolve(__dirname, './views/productDetail.html'))); */
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
+
 app.use('/main', routes);
+app.use('/products', productsRoutes); 
 
 
 
-module.exports= app;
+module.exports= app; */
