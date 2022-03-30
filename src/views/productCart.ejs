@@ -8,7 +8,7 @@
     
     <%- include('./partials/header') %> 
 
-    <div class="header">
+    <div class="head">
         <div class="steps">
             <h1 class="step-1">Mi Carrito</h1>
             <h1 class="step-2">Detalle de envío</h1>
@@ -20,10 +20,10 @@
         </div>
     </div>
 
-    <main>
+    <main class="main">
         
         <div class="cart-container">
-            <section class="items">
+            <div class="items">
                 <div class="cart-items">
                     <div class="image">
                         <img src="/images/default-image.jpg" alt="Photo">
@@ -40,9 +40,9 @@
                     <div class="button">+</div>
                 </div>
                 <div class="remove">Quitar</div>
-            </section>
+            </div>
 
-            <section class="items">
+            <div class="items">
                 <div class="cart-items">
                     <div class="image">
                         <img src="/images/default-image.jpg" alt="Photo">
@@ -59,11 +59,11 @@
                     <div class="button">+</div>
                 </div>
                 <div class="remove">Quitar</div>
-            </section>
+            </div>
         </div>
 
         <div class="cost">
-            <section>
+            <section class="section-cost">
                 <h4>Calculá tu costo de envío</h4>
                 <input type="text" class="shipp" name="shipp" placeholder="Código Postal">
                 <div>
@@ -86,7 +86,7 @@
                         <p>$5</p>
                     </div>
     
-                    <hr>
+                    <hr class="total-hr">
     
                     <div class="total-amount">
                         <b><p>TOTAL</p></b>
