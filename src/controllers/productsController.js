@@ -21,7 +21,12 @@ const controller = {
         return res.render('productCart');
     },
     productDetail: (req, res) => {
-        return res.render('productDetail');
+		let id = req.params.id;
+		let product = products.find(product => product.id == id)
+		res.render('productDetail', {
+			product,
+			toThousand
+		})
     },
     create: (req, res) => {
 		res.render('product-create-form')

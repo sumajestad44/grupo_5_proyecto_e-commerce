@@ -5,7 +5,7 @@
 <body>
     <%- include('./partials/header') %> 
 
-   <form action="/products/edit<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+   <form action="/edit<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
         <div class="productDetail">
             <div class="img-producto">
                 <label for="image">Imágen del producto: </label>

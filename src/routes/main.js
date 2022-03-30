@@ -11,7 +11,6 @@ router.get('/register', productsController.register);
 
 router.get('/cart', productsController.productCart);
 
-router.get('/detail', productsController.productDetail);
 
 
 module.exports = router;

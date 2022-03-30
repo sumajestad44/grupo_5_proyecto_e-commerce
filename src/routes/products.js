@@ -18,6 +18,9 @@ var upload= multer({
     storage: storage,
 })
 
+/** DETALLE DE PRODUCTO ESPECIFICO */
+router.get('/detail/:id', productsController.productDetail);
+
 /*** CREAR UN PRODUCTO ***/ 
 router.get('/create', productsController.create); 
 router.post('/', upload.any(), productsController.store); 
