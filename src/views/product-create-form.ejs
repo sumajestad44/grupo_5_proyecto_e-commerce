@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %> 
+    <link rel="stylesheet" href="/css/styles.css">
 <body>
     <%- include('./partials/header') %> 
 
+    <div>
+        <h2> Creación de productos </h2>
+    </div>
+    <div class="productDetail">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class=""> 
+                <label for="name">Nombre del producto: </label>
+                <input type="text" id="name" name="name">
+                <label for="description">Descripción: </label>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                <label for="product-image">Imágen del producto:</label>
+                <input type="file" name="product-image" id="product-image">
+                <label for="category">Categoría:</label>
+                <select name="category" id="category">
+                    <option value="">Elegí</option>
+                    <option value="">Yerba</option>
+                    <option value="">Mate</option>
+                    <option value="">Bombilla</option>
+                    <option value="">Termo</option>
+                </select>
+                <label for="price">Precio:</label>
+                <input type="text" id="price" name="price">
+            </div>
+            <div  class="select-weight"> 
+                <button type="submit">Crear producto</button>
+            </div>
+
+        </form>
+    </div>
     
     
 

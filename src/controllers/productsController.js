@@ -1,3 +1,11 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
+
 const controller = {
     home: (req, res) => {
         return res.render('home');
@@ -14,5 +22,27 @@ const controller = {
     productDetail: (req, res) => {
         return res.render('productDetail');
     },
+    create: (req, res) => {
+		res.render('product-create-form')
+	},
+	
+	// Create -  Method to store
+	store: (req, res) => {
+		let image
+		console.log(req.files);
+		if(req.files[0] != undefined){
+			image = req.files[0].filename
+		} else {
+			image = 'default-image.png'
+		};
+		let newProduct = {
+			id: products[products.length - 1].id + 1,
+			...req.body,
+			image: image,
+		};
+		products.push(newProduct);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		res.redirect('/');
+	},
 }
 module.exports = controller;
