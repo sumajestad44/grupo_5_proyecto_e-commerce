@@ -5,6 +5,9 @@ const routes = require('./src/routes/main');
 const productsRoutes = require('./src/routes/products');
 const usersRoutes = require('./src/routes/users');
 
+const methodOverride = require('method-override');
+app.use(methodOverride  ('_method'));
+
 const publicFolderPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicFolderPath));
 
