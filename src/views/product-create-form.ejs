@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %> 
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/product-create-form.css">
 <body>
     <%- include('./partials/header') %> 
-
+<div class="form-group">
     <div>
         <h2> Creación de productos </h2>
     </div>
-    <div class="productDetail">
+    <div>
         <form action="/" method="POST" enctype="multipart/form-data">
-            <div class=""> 
+            <div class="create-product"> 
                 <label for="name">Nombre del producto: </label>
                 <input type="text" id="name" name="name">
+
                 <label for="description">Descripción: </label>
-                <textarea name="description" id="description" cols="30" rows="10"></textarea>
-                <label for="image">Imágen del producto:</label>
-                <input type="file" name="image" id="image">
+                <textarea name="description" id="description" maxlength="255"></textarea>
+            
+
                 <label for="category">Categoría:</label>
                 <select name="category" id="category">
                     <option value="">Elegí</option>
@@ -25,20 +26,25 @@
                     <option value="">Bombilla</option>
                     <option value="">Termo</option>
                 </select>
+
                 <label for="price">Precio:</label>
                 <input type="text" id="price" name="price">
+
+                <label for="image">Imágen del producto:</label>
+                <input type="file" name="image" id="image">
             </div>
             <div  class="select-weight"> 
-                <button type="submit">Crear producto</button>
+                <button type="submit" class="button">Crear producto</button>
             </div>
 
         </form>
     </div>
+</div>
     
-    
 
-
-
+<footer>
     <%- include('./partials/footer') %> 
+</footer>
+
 </body>
 </html>

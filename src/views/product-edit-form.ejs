@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %> 
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/product-edit-form.css">
 <body>
     <%- include('./partials/header') %> 
-
-   <form action="/edit<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-        <div class="productDetail">
-            <div class="img-producto">
-                <label for="image">Imágen del producto: </label>
-                <input type="file" name="image" id="image" >
-            </div>
-            <div class="product">
-                <div class="text-detail">
-                    <label for="name"><h2>Nombre del producto: </h2></label>
-                    <input type="text" name="name" id="name" value="<%=product.name%>">
-                    <label for="description">Descripción del producto:</label>
-                    <textarea name="description" id="description" cols="30" rows="10"> <%=product.description%> </textarea>
-                </div>
-                <div class="select-weight">
-                    <label for="precio">Precio:</label>
-                    <input type="text" name="price" id="price" value="<%=product.price%>">
-                </div>
-                <input type="submit" value="Guardar producto" class="button-detail">
-            </div>
-        </div>  
-    </form>
     
+    <div class="update-form">
+            <div>
+                <h2>Edición de productos</h2>
+            </div>
+        <form action="/edit<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+            <div class="update-product"> 
+
+                <label for="name">Nombre del producto: </label>
+                <input type="text" id="name" name="name" value="<%=product.name%>">
+
+                <label for="description">Descripción: </label>
+                <textarea name="description" id="description" maxlength="255"><%=product.description%></textarea>
+            
+
+                <label for="category">Categoría:</label>
+                <select name="category" id="category">
+                    <option value="">Elegí</option>
+                    <option value="">Yerba</option>
+                    <option value="">Mate</option>
+                    <option value="">Bombilla</option>
+                    <option value="">Termo</option>
+                </select>
+
+                <label for="price">Precio:</label>
+                <input type="text" id="price" name="price" value="<%=product.price%>">
+
+                <label for="image">Imágen del producto:</label>
+                <input type="file" name="image" id="image">
+            </div>
+                <div class="update">
+                    <button type="submit" class="button-update">Guardar producto</button>
+                </div>
+                
+            </div>
+          
+        </form>
+    </div>  
     
 
 
