@@ -8,7 +8,7 @@ const productsController = require('../controllers/productsController');
 //********* MULTER *********//
 var storage = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, './public/images/products');
+        cb(null, './public/images');
     },
     filename: function(req, file, cb){
         cb(null,file.fieldname + '-' + Date.now()+ path.extname(file.originalname));
@@ -16,7 +16,7 @@ var storage = multer.diskStorage({
 })
 var upload= multer({
     storage: storage,
-})
+});
 
 /** DETALLE DE PRODUCTO ESPECIFICO */
 router.get('/detail/:id', productsController.productDetail);
