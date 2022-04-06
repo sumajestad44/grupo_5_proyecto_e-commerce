@@ -1,4 +1,7 @@
+@import url('home.css');
+@import url('normalize.css');
 .update-form {
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     background-color:#909090;

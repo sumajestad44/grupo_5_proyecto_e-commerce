@@ -1,5 +1,6 @@
 /* PRODUCT IMAGE */
-
+@import url('home.css');
+@import url('normalize.css');
 .productDetail {
     display: flex;
     overflow: hidden;
