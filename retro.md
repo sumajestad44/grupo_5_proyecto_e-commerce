@@ -19,3 +19,8 @@
 - Comenzar a: dedicar un lapso de tiempo a corregir errores.
 - Continuar: organizando reuniones para tratar avances y dudas.
 - Dejar de: realizar las tareas a medias.
+
+## Sprint 5 - Middlewares + Auth
+- Comenzar a: aplicar diseño e imágenes definitivas.
+- Continuar: reuniendonos presencialmente.
+- Dejar de: no pedir ayuda a los profes.
