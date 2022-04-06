@@ -22,5 +22,7 @@
 
 ## Sprint 5 - Middlewares + Auth
 - Comenzar a: aplicar diseño e imágenes definitivas.
+- Hacer más: clara la división de tareas.
 - Continuar: reuniendonos presencialmente.
+- Hacer menos: cambios provisorios.
 - Dejar de: no pedir ayuda a los profes.
