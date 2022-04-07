@@ -43,7 +43,6 @@ const controller = {
 	// Creación de producto -  Método para almacenar
 	store: (req, res) => {
 		let image
-		console.log(req.files);
 		if(req.files[0] != undefined){
 			image = req.files[0].filename
 		} else {
@@ -85,6 +84,12 @@ const controller = {
 			} else {
 				image = productToEdit.image
 			}
+			console.log('----------');
+			console.log(req.files);
+			console.log('----------');
+			console.log('----------');
+			console.log(req.body);
+			console.log('----------');
 			productToEdit = {
 				id: productToEdit.id,
 				...req.body,
