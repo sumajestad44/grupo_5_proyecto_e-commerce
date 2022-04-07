@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
+const path = require('path');
 
 //********** CONTROLLERS REQUIRES ***************//
 const productsController = require('../controllers/productsController');
@@ -8,7 +9,7 @@ const productsController = require('../controllers/productsController');
 //********* MULTER *********//
 var storage = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, './public/images/products');
+        cb(null, '../public/images');
     },
     filename: function(req, file, cb){
         cb(null,file.fieldname + '-' + Date.now()+ path.extname(file.originalname));
@@ -28,6 +29,7 @@ router.post('/', upload.any(), productsController.store);
 /*** EDITAR UN PRODUCTO ***/
 router.get('/edit/:id', productsController.edit);
 router.patch('/edit/:id', upload.any(), productsController.update);
+
 
 
 

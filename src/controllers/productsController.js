@@ -21,17 +21,25 @@ const controller = {
         return res.render('productCart');
     },
     productDetail: (req, res) => {
-		let id = req.params.id;
-		let product = products.find(product => product.id == id)
-		res.render('productDetail', {
-			product,
-			toThousand
-		})
+		let id = req.params.id
+			let product = products.find(product => product.id == id)
+			res.render('productDetail', {
+				product,
+			
+			});
     },
+
+
+
+	/* VISTA DE FORMULARIO DE CREACIÓN DE PRODUCTOS */
     create: (req, res) => {
 		res.render('product-create-form')
 	},
 	
+
+
+
+
 	// Creación de producto -  Método para almacenar
 	store: (req, res) => {
 		let image
@@ -50,6 +58,10 @@ const controller = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/');
 	},
+
+
+
+
 		// Actualizar - Formulario para editar
 		edit: (req, res) => {
 			let id = req.params.id
@@ -57,8 +69,12 @@ const controller = {
 			res.render('product-edit-form', {
 				product,
 			
-			})
+			});
 		},
+
+
+
+
 		// Actualizar - Método para actualizar
 		update: (req, res) => {
 			let id = req.params.id;
