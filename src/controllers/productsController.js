@@ -46,7 +46,7 @@ const controller = {
 		if(req.files[0] != undefined){
 			image = req.files[0].filename
 		} else {
-			image = 'default-image.png'
+			image = 'default-image.jpg'
 		};
 		let newProduct = {
 			id: products[products.length - 1].id + 1,
@@ -84,12 +84,6 @@ const controller = {
 			} else {
 				image = productToEdit.image
 			}
-			console.log('----------');
-			console.log(req.files);
-			console.log('----------');
-			console.log('----------');
-			console.log(req.body);
-			console.log('----------');
 			productToEdit = {
 				id: productToEdit.id,
 				...req.body,

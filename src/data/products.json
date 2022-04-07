@@ -506,5 +506,13 @@
   "category": "Mate",
   "price": "122",
   "image": "image-1649356152281.jpg"
+ },
+ {
+  "id": 52,
+  "name": "ALGO",
+  "description": "algooooo",
+  "category": "Bombilla",
+  "price": "20",
+  "image": "default-image.jpg"
  }
 ]
