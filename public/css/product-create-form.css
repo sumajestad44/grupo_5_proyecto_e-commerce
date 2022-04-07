@@ -1,4 +1,7 @@
+@import url('home.css');
+@import url('normalize.css');
 .form-group {
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     background-color:#909090;
@@ -10,7 +13,7 @@ h2 {
 }
 
 .create-product {
-    margin: 0px 500px 0px 500px;
+    margin: 0px 300px 0px 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +37,7 @@ h2 {
 }
 
 .select-weight {
-    margin: 20px 500px 0px 500px;
+    margin: 20px 300px 0px 300px;
     display: flex;
     justify-content: center;
 }

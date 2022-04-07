@@ -1,3 +1,5 @@
+@import url('home.css');
+@import url('normalize.css');
 main {
     width: 90%;
     margin: 0 auto;
@@ -43,16 +45,11 @@ main {
     font-size: var(--text-s-sm);
 }
 
-.btn {
-    background-color: blue;
-    color: #FFF;
-    width: 50%;
-    transition: background-color 0.5s ease;
-    cursor: pointer;
-    
-}
-.btn:hover{
-    background-color: var();
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
 }
 
 .recordarUsuario{

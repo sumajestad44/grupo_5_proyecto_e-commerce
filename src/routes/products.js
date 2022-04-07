@@ -17,7 +17,7 @@ var storage = multer.diskStorage({
 })
 var upload= multer({
     storage: storage,
-})
+});
 
 /** DETALLE DE PRODUCTO ESPECIFICO */
 router.get('/detail/:id', productsController.productDetail);
