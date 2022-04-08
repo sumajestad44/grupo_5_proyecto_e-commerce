@@ -30,8 +30,8 @@ router.post('/', upload.any(), productsController.store);
 router.get('/edit/:id', productsController.edit);
 router.put('/edit/:id', upload.any(), productsController.update);
 
-
-
+/*** BORRAR UN PRODUCTO ***/
+router.delete('/delete/:id', productsController.destroy);
 
 
 module.exports = router;

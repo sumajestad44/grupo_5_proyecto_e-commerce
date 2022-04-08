@@ -3,11 +3,9 @@
   "id": 1,
   "name": "Yerba mate sin palo",
   "description": "aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit",
-  "price": 4606,
-  "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-sin-palo.png",
-  "type": "banner",
-  "size": "500gr"
+  "category": "",
+  "price": "4606",
+  "image": "PRODUCTS-yerba-mate-sin-palo.png"
  },
  {
   "id": 2,
@@ -503,16 +501,8 @@
   "id": 51,
   "name": "mateeeeeeeee",
   "description": "ok",
-  "category": "Mate",
+  "category": "",
   "price": "122",
   "image": "image-1649356152281.jpg"
- },
- {
-  "id": 52,
-  "name": "ALGO",
-  "description": "algooooo",
-  "category": "Bombilla",
-  "price": "20",
-  "image": "default-image.jpg"
  }
 ]

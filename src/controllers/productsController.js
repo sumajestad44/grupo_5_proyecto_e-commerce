@@ -98,5 +98,14 @@ const controller = {
 			fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
 			res.redirect('/');
 		},
+
+
+		// Borrar un producto
+		destroy : (req, res) => {
+		let id = req.params.id;
+		let finalProd = products.filter(product => product.id != id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProd, null, ' '));
+		res.redirect('/');
+		}
 }
 module.exports = controller;
