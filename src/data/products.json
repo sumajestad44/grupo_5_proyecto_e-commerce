@@ -3,9 +3,10 @@
   "id": 1,
   "name": "Yerba mate sin palo",
   "description": "aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit",
-  "category": "",
+  "category": "yerba",
   "price": "4606",
-  "image": "PRODUCTS-yerba-mate-sin-palo.png"
+  "image": "default-image.jpg",
+  "size": "750gr"
  },
  {
   "id": 2,
@@ -13,7 +14,7 @@
   "description": "sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus",
   "price": 716.76,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-con-palo-juan-valdez.png",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "750gr"
  },
@@ -23,7 +24,7 @@
   "description": "semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut",
   "price": 4931.06,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-saborizada.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "750gr"
  },
@@ -33,7 +34,7 @@
   "description": "pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum",
   "price": 3147.36,
   "category": "yerba",
-  "image": "PRODUCTS-yerba_mate_compuesta.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "750gr"
  },
@@ -43,7 +44,7 @@
   "description": "in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla",
   "price": 3170.23,
   "category": "yerba",
-  "image": "PRODUCTS-YERBA-MATE-BARBACUA.jpg",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "250gr"
  },
@@ -53,7 +54,7 @@
   "description": "tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam",
   "price": 4614.23,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-organica.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "250gr"
  },
@@ -63,7 +64,7 @@
   "description": "vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a",
   "price": 666.1,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-terere.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "750gr"
  },
@@ -73,7 +74,7 @@
   "description": "quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus",
   "price": 2047.6,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-sin-palo.png",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "750gr"
  },
@@ -83,7 +84,7 @@
   "description": "et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam",
   "price": 2915.9,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-con-palo-juan-valdez.png",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "1kg"
  },
@@ -93,7 +94,7 @@
   "description": "volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra",
   "price": 4846.64,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-saborizada.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "250gr"
  },
@@ -103,7 +104,7 @@
   "description": "suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla",
   "price": 3844.04,
   "category": "yerba",
-  "image": "PRODUCTS-yerba_mate_compuesta.jpg",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "250gr"
  },
@@ -113,7 +114,7 @@
   "description": "nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel",
   "price": 4202.1,
   "category": "yerba",
-  "image": "PRODUCTS-YERBA-MATE-BARBACUA.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "500gr"
  },
@@ -123,7 +124,7 @@
   "description": "et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id",
   "price": 2921.27,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-organica.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "250gr"
  },
@@ -133,7 +134,7 @@
   "description": "at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et",
   "price": 4907.66,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-terere.jpg",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "250gr"
  },
@@ -143,7 +144,7 @@
   "description": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec",
   "price": 1154.19,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-sin-palo.png",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "250gr"
  },
@@ -153,7 +154,7 @@
   "description": "varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit",
   "price": 1362.91,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-con-palo-juan-valdez.png",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "1kg"
  },
@@ -163,7 +164,7 @@
   "description": "metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede",
   "price": 4509.98,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-saborizada.jpg",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "1kg"
  },
@@ -173,7 +174,7 @@
   "description": "cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede",
   "price": 3376.11,
   "category": "yerba",
-  "image": "PRODUCTS-yerba_mate_compuesta.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "1kg"
  },
@@ -183,7 +184,7 @@
   "description": "quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci",
   "price": 1801.46,
   "category": "yerba",
-  "image": "PRODUCTS-YERBA-MATE-BARBACUA.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "500gr"
  },
@@ -193,7 +194,7 @@
   "description": "praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique",
   "price": 1866.12,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-organica.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "750gr"
  },
@@ -203,7 +204,7 @@
   "description": "posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis",
   "price": 1189.85,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-terere.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "1kg"
  },
@@ -213,7 +214,7 @@
   "description": "odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in",
   "price": 3570.56,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-sin-palo.png",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "500gr"
  },
@@ -223,7 +224,7 @@
   "description": "in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem",
   "price": 4321.69,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-con-palo-juan-valdez.png",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "500gr"
  },
@@ -233,7 +234,7 @@
   "description": "parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum",
   "price": 2490.93,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-saborizada.jpg",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "1kg"
  },
@@ -243,7 +244,7 @@
   "description": "gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in",
   "price": 3633.09,
   "category": "yerba",
-  "image": "PRODUCTS-yerba_mate_compuesta.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "1kg"
  },
@@ -253,7 +254,7 @@
   "description": "ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed",
   "price": 3808.38,
   "category": "yerba",
-  "image": "PRODUCTS-YERBA-MATE-BARBACUA.jpg",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "750gr"
  },
@@ -263,7 +264,7 @@
   "description": "ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id",
   "price": 4162.14,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-organica.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "250gr"
  },
@@ -273,7 +274,7 @@
   "description": "a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum",
   "price": 1787.61,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-terere.jpg",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "500gr"
  },
@@ -283,7 +284,7 @@
   "description": "id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat",
   "price": 2471.14,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-sin-palo.png",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "250gr"
  },
@@ -293,7 +294,7 @@
   "description": "vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat",
   "price": 4581.04,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-con-palo-juan-valdez.png",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "250gr"
  },
@@ -303,7 +304,7 @@
   "description": "lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque",
   "price": 2922.59,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-saborizada.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "1kg"
  },
@@ -313,7 +314,7 @@
   "description": "nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat",
   "price": 2879.67,
   "category": "yerba",
-  "image": "PRODUCTS-yerba_mate_compuesta.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "1kg"
  },
@@ -323,7 +324,7 @@
   "description": "sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc",
   "price": 4386.58,
   "category": "yerba",
-  "image": "PRODUCTS-YERBA-MATE-BARBACUA.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "750gr"
  },
@@ -333,7 +334,7 @@
   "description": "mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur",
   "price": 1975.82,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-organica.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "250gr"
  },
@@ -343,7 +344,7 @@
   "description": "vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique",
   "price": 2198.09,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-terere.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "750gr"
  },
@@ -353,7 +354,7 @@
   "description": "aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse",
   "price": 4350.12,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-sin-palo.png",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "1kg"
  },
@@ -363,7 +364,7 @@
   "description": "aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus",
   "price": 2265.81,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-con-palo-juan-valdez.png",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "1kg"
  },
@@ -373,7 +374,7 @@
   "description": "luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
   "price": 4638.03,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-saborizada.jpg",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "250gr"
  },
@@ -383,7 +384,7 @@
   "description": "primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus",
   "price": 3759.86,
   "category": "yerba",
-  "image": "PRODUCTS-yerba_mate_compuesta.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "500gr"
  },
@@ -393,7 +394,7 @@
   "description": "nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel",
   "price": 563.76,
   "category": "yerba",
-  "image": "PRODUCTS-YERBA-MATE-BARBACUA.jpg",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "1kg"
  },
@@ -403,7 +404,7 @@
   "description": "nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in",
   "price": 849.58,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-organica.jpg",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "250gr"
  },
@@ -413,7 +414,7 @@
   "description": "eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus",
   "price": 625.37,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-terere.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "500gr"
  },
@@ -423,7 +424,7 @@
   "description": "ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis",
   "price": 2734.05,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-sin-palo.png",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "750gr"
  },
@@ -433,7 +434,7 @@
   "description": "fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut",
   "price": 2524.7,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-con-palo-juan-valdez.png",
+  "image": "default-image.jpg",
   "type": "banner",
   "size": "1kg"
  },
@@ -443,7 +444,7 @@
   "description": "turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor",
   "price": 3610.87,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-saborizada.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "500gr"
  },
@@ -453,7 +454,7 @@
   "description": "dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum",
   "price": 1955.79,
   "category": "yerba",
-  "image": "PRODUCTS-yerba_mate_compuesta.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "500gr"
  },
@@ -463,7 +464,7 @@
   "description": "sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue",
   "price": 2086.21,
   "category": "yerba",
-  "image": "PRODUCTS-YERBA-MATE-BARBACUA.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "500gr"
  },
@@ -473,7 +474,7 @@
   "description": "erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget",
   "price": 2155.61,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-organica.jpg",
+  "image": "default-image.jpg",
   "type": "nuevo",
   "size": "750gr"
  },
@@ -483,7 +484,7 @@
   "description": "quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris",
   "price": 3672.02,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-terere.jpg",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "250gr"
  },
@@ -493,7 +494,7 @@
   "description": "a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio",
   "price": 2327.62,
   "category": "yerba",
-  "image": "PRODUCTS-yerba-mate-sin-palo.png",
+  "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "1kg"
  },

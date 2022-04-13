@@ -106,6 +106,12 @@ const controller = {
 		let finalProd = products.filter(product => product.id != id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProd, null, ' '));
 		res.redirect('/');
-		}
+		},
+
+		//	Root - Show all products
+			index: (req, res) => {
+			res.render('products', {products});
+		},
+
 }
 module.exports = controller;
