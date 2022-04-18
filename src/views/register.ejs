@@ -9,18 +9,18 @@
     <%- include('./partials/header') %> 
 
     <main class="register">
-        <form action="/" method="POST">
+        <form action="/register" method="POST" enctype="multipart/form-data">
             <div class="datos-usuario-register">
                 <label for="nombre">Nombre: </label>
-                <input type="text" name="nombre" id="nombre" required>
+                <input type="text" name="first_name" id="first_name" required>
                 <label for="apellido">Apellido: </label>
-                <input type="text" name="apellido" id="apellido" required>
+                <input type="text" name="last_name" id="last_name" required>
                 <label for="email">Correo electrónico: </label>
                 <input type="email" name="email" id="email" required>
                 <label for="pass">Contraseña: </label>
-                <input type="password" name="pass" id="pass" minlength="8" required>
+                <input type="password" name="password" id="password" minlength="8" required>
                 <label for="pass_confirm">Contraseña (confirmación): </label>
-                <input type="password" name="pass_confirm" id="pass_confirm" minlength="8" required>
+                <input type="password" name="password_confirm" id="password_confirm" minlength="8" required>
             </div>
 <br>
             <div class="buttons">
