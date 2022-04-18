@@ -1,4 +1,4 @@
-let userController = {
+let usersController = {
     'register': function(req, res) {
         res.render('register');
     },
@@ -17,3 +17,5 @@ let userController = {
         res.redirect('/');
     }
 }
+
+module.exports = usersController;
