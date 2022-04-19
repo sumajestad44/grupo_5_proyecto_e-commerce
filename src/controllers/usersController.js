@@ -14,9 +14,13 @@ let usersController = {
     },
     
     store: function(req, res){
-        let image = 'default-user.png';
         let category = "User";
-        console.log(req.body);
+        let image
+		if(req.files[0] != undefined){
+			image = req.files[0].filename
+		} else {
+			image = 'default-user.png'
+		};
         let newUser = {
             id: users[users.length - 1].id + 1,
             first_name: req.body.first_name,

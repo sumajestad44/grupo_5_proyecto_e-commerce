@@ -9,7 +9,7 @@
     <%- include('./partials/header') %> 
 
     <main class="register">
-        <form action="/register" method="POST">
+        <form action="/register" method="POST" enctype="multipart/form-data">
             <div class="datos-usuario-register">
                 <label for="nombre">Nombre: </label>
                 <input type="text" name="first_name" id="first_name" required>
@@ -21,6 +21,8 @@
                 <input type="password" name="password" id="password" minlength="8" required>
                 <label for="pass_confirm">Contraseña (confirmación): </label>
                 <input type="password" name="password_confirm" id="password_confirm" minlength="8" required>
+                <label for="image">Foto de perfil:</label>
+                <input type="file" name="image" id="image">
             </div>
 <br>
             <div class="buttons">
