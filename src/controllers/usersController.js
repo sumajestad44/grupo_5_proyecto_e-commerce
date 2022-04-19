@@ -1,6 +1,7 @@
 const { validationResult } = require('express-validator');
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcryptjs')
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -26,7 +27,7 @@ let usersController = {
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             email: req.body.email,
-            password: req.body.password,
+            password: bcrypt.hashSync(req.body.password, 10),
             category: category,
             image: image,
         };

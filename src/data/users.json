@@ -178,5 +178,14 @@
   "password": "pgVxDEE3S",
   "category": "User",
   "image": "default-user.png"
+ },
+ {
+  "id": 21,
+  "first_name": "a",
+  "last_name": "a",
+  "email": "aaa@gmail.com",
+  "password": "$2a$10$zxDbGMNmsuugxVzjN3pAI.nzpeNzm5fKWtaST9bkLT4DZo6FAlgAa",
+  "category": "User",
+  "image": "image-1650330334378.jpg"
  }
 ]
