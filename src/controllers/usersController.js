@@ -16,6 +16,7 @@ let usersController = {
     store: function(req, res){
         let image = 'default-user.png';
         let category = "User";
+        console.log(req.body);
         let newUser = {
             id: users[users.length - 1].id + 1,
             first_name: req.body.first_name,
