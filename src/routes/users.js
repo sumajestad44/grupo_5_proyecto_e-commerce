@@ -7,12 +7,19 @@ const usersController = require('../controllers/usersController');
 
 const {body} = require('express-validator');
 
+
 // VALIDACIONES
 const validateRegister = [
     body('nombre').notEmpty().withMessage('Ingrese su nombre'),
     body('apellido').notEmpty().withMessage('Ingrese su apellido'),
     body('email').isEmail().withMessage('Ingrese un email válido'),
 ];
+
+// MIDDLEWARES
+const guestMiddleware = require('../middleware/guestMiddleware');
+const authMiddleware = require('../middleware/authMiddleware');
+
+
 
 //********* MULTER *********//
 var storage = multer.diskStorage({
@@ -30,11 +37,21 @@ var upload= multer({
 
 // RUTAS
 // Login
-router.get('/login', usersController.login);
+router.get('/login', guestMiddleware, usersController.login);
+
+// Procesamiento de formulario de login
+router.post('/login', usersController.loginProcess);
 
 // Register
-router.get('/register', usersController.register);
+router.get('/register', guestMiddleware, usersController.register);
+
 // Procesamiento de formulario de registro
 router.post('/register', upload.any(), usersController.store);
+
+// Perfil de usuario
+router.get('/profile', authMiddleware, usersController.profile);
+
+// Logout
+router.get('/logout', usersController.logout)
 
 module.exports = router;
