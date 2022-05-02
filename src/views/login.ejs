@@ -10,10 +10,15 @@
     <main class="login">
         <form action="/" method="POST">
             <div class="datos-usuario-login">
-                <label for="nombre">Nombre: </label>
-                <input type="text" name="nombre" id="nombre" required>
-                <label for="pass">Contraseña: </label>
-                <input type="password" name="pass" id="pass" minlength="8" required> 
+                <label for="nombre">Email </label>
+                <input type="email" name="email" id="email" required placeholder="Tierra@Mate.com">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                   <% } %>
+                <label for="pass">Contraseña </label>
+                <input type="password" name="pass" id="pass" minlength="8" required placeholder="TierraMate123"> 
             </div>
             <div class="container-login">
                 <div class="recordarUsuario">

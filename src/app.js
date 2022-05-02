@@ -1,5 +1,6 @@
 const createError = require('http-errors');
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -10,6 +11,16 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products')
 
 const app = express();
+
+
+// middleware de aplicacion
+
+app.use(session({
+  secret: 'texto secreto',
+  resave: false,
+  saveUninitialized: false,
+}));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
