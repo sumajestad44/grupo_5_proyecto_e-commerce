@@ -6,13 +6,8 @@ const path = require('path');
 const usersController = require('../controllers/usersController');
 
 const {body} = require('express-validator');
+const validateRegisterMiddleware = require('../middlewares/validateRegisterMiddleware');
 
-// VALIDACIONES
-const validateRegister = [
-    body('nombre').notEmpty().withMessage('Ingrese su nombre'),
-    body('apellido').notEmpty().withMessage('Ingrese su apellido'),
-    body('email').isEmail().withMessage('Ingrese un email válido'),
-];
 
 //********* MULTER *********//
 var storage = multer.diskStorage({
@@ -26,6 +21,10 @@ var storage = multer.diskStorage({
 var upload= multer({
     storage: storage,
 });
+//****************************** */
+
+
+
 
 
 // RUTAS
@@ -35,6 +34,6 @@ router.get('/login', usersController.login);
 // Register
 router.get('/register', usersController.register);
 // Procesamiento de formulario de registro
-router.post('/register', upload.any(), usersController.store);
+router.post('/register', upload.any(), validateRegisterMiddleware, usersController.store);
 
 module.exports = router;

@@ -33,3 +33,6 @@
 .red-register{
     font-size: var(--text-s-sm);
 }
+.text-danger{
+    color: red;
+}
