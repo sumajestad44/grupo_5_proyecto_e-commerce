@@ -187,14 +187,5 @@
   "password": "$2a$10$zxDbGMNmsuugxVzjN3pAI.nzpeNzm5fKWtaST9bkLT4DZo6FAlgAa",
   "category": "User",
   "image": "image-1650330334378.jpg"
- },
- {
-  "id": 22,
-  "first_name": "s",
-  "last_name": "s",
-  "email": "aaa@gmail.com",
-  "password": "$2a$10$vigIWpC0tW5UGavQwVt2auK/X/0QpPUUeHjPBJtVnEd7Nu2QLZD3O",
-  "category": "User",
-  "image": "image-1650567842462.jpg"
  }
 ]
