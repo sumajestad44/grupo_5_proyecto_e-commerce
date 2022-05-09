@@ -187,5 +187,14 @@
   "password": "$2a$10$zxDbGMNmsuugxVzjN3pAI.nzpeNzm5fKWtaST9bkLT4DZo6FAlgAa",
   "category": "User",
   "image": "image-1650330334378.jpg"
+ },
+ {
+  "id": 22,
+  "first_name": "Ignacio",
+  "last_name": "Biglieri",
+  "email": "nacho.biglieri00@gmail.com",
+  "password": "$2a$10$51m7oNcDYbxloDvk38xf3OYNWj5taIRISXk3xWYzmsSz4U/ljWNAy",
+  "category": "User",
+  "image": "image-1652136532362.jpg"
  }
 ]

@@ -8,10 +8,12 @@ const methodOverride = require('method-override');
 
 const mainRouter = require('./routes/main');
 const usersRouter = require('./routes/users');
-const productsRouter = require('./routes/products')
+const productsRouter = require('./routes/products');
+/* const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); */
 
 const app = express();
 
+/* app.use(userLoggedMiddleware); */
 
 // middleware de aplicacion
 

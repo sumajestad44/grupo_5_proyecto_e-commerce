@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs')
 
 const User = require('../models/User')
 const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const allUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 let usersController = {
     login: (req, res) => {
@@ -51,7 +51,7 @@ let usersController = {
 			image = 'default-user.png'
 		}; // logica para que tome la imagen que se envia por el formulario y si no hay que ponga una por defecto
         let newUser = {
-            id: users[users.length - 1].id + 1,
+            id: allUsers[allUsers.length - 1].id + 1,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             email: req.body.email,
@@ -59,8 +59,8 @@ let usersController = {
             category: category,
             image: image,
         }; // Creamos la variable newUser donde se va a almacenar toda la información que viene por body
-        users.push(newUser); // y le hacemos push en users
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' ')); // no me acuerdo q hacia, creo que escribía sobre el json
+        allUsers.push(newUser); // y le hacemos push en users
+        fs.writeFileSync(usersFilePath, JSON.stringify(allUsers, null, ' ')); // no me acuerdo q hacia, creo que escribía sobre el json
         res.redirect('/'); // y un redirect
         
     },
@@ -71,16 +71,20 @@ let usersController = {
     },
 
     loginProcess: (req,res) => {
-        let userLogin = users.findByField('email', req.body.email);
+        let userLogin = User.findByField('email', req.body.email);
+        
 
         if (userLogin) {
-            let isOkThePassword = bcrypt.compareSync(req.body.password, userLogin.password)
+            console.log(req.body.password)
+          let isOkThePassword = bcrypt.compareSync(req.body.password, userLogin.password)
+          console.log(userLogin.password)
             if (isOkThePassword) {
                 delete userLogin.password;
                 req.session.userLogged = userLogin;
-                return res.redirect('/src/views/home.ejs');
-            }
+                return res.redirect('/');
+            } 
         }
+      
         return res.render('login', {
             errors: {
                 email: {
@@ -89,6 +93,8 @@ let usersController = {
             }
         });
     },
+
+    
 
     profile: (req,res) => {
         return res.render('usersProfile');
