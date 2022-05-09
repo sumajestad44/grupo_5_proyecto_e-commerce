@@ -34,5 +34,6 @@
     font-size: var(--text-s-sm);
 }
 .text-danger{
+    padding-bottom: 30px;
     color: red;
 }
