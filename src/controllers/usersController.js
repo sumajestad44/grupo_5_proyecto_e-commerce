@@ -26,7 +26,7 @@ let usersController = {
             });
         }
         //**************************************//
-
+        console.log(resultValidation);
 
         //****** PERMITE QUE EL USUARIO NO SE REGISTRE CON UN EMAIL YA REGISTRADO ********//
         let userInDb = User.findByField('email', req.body.email);
@@ -61,7 +61,7 @@ let usersController = {
         }; // Creamos la variable newUser donde se va a almacenar toda la información que viene por body
         users.push(newUser); // y le hacemos push en users
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' ')); // no me acuerdo q hacia, creo que escribía sobre el json
-        res.redirect('/'); // y un redirect
+        res.redirect('/login'); // y un redirect
         
     },
 
@@ -71,14 +71,14 @@ let usersController = {
     },
 
     loginProcess: (req,res) => {
-        let userLogin = users.findByField('email', req.body.email);
+        let userLogin = User.findByField('email', req.body.email);
 
         if (userLogin) {
             let isOkThePassword = bcrypt.compareSync(req.body.password, userLogin.password)
             if (isOkThePassword) {
                 delete userLogin.password;
                 req.session.userLogged = userLogin;
-                return res.redirect('/src/views/home.ejs');
+                return res.render('usersProfile');
             }
         }
         return res.render('login', {
