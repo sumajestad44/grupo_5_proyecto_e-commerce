@@ -80,7 +80,7 @@ let usersController = {
             if (isOkThePassword) {
                 delete userLogin.password;
                 req.session.userLogged = userLogin;
-                return res.render('usersProfile');
+                return res.redirect('/');
             }
         }
       
