@@ -6,14 +6,12 @@ const path = require('path');
 const usersController = require('../controllers/usersController');
 
 const {body} = require('express-validator');
-const validateRegisterMiddleware = require('../middlewares/validateRegisterMiddleware');
 
 
 // MIDDLEWARES
-const guestMiddleware = require('../middleware/guestMiddleware');
-const authMiddleware = require('../middleware/authMiddleware');
-
-
+const validateRegisterMiddleware = require('../middlewares/validateRegisterMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 //********* MULTER *********//
 var storage = multer.diskStorage({
