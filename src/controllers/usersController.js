@@ -26,7 +26,7 @@ let usersController = {
             });
         }
         //**************************************//
-
+        console.log(resultValidation);
 
         //****** PERMITE QUE EL USUARIO NO SE REGISTRE CON UN EMAIL YA REGISTRADO ********//
         let userInDb = User.findByField('email', req.body.email);
@@ -72,7 +72,6 @@ let usersController = {
 
     loginProcess: (req,res) => {
         let userLogin = User.findByField('email', req.body.email);
-        
 
         if (userLogin) {
             console.log(req.body.password)
@@ -82,7 +81,7 @@ let usersController = {
                 delete userLogin.password;
                 req.session.userLogged = userLogin;
                 return res.redirect('/');
-            } 
+            }
         }
       
         return res.render('login', {
