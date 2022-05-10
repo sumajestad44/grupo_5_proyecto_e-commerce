@@ -7,4 +7,19 @@ module.exports = [
     body('last_name').notEmpty().withMessage('Ingrese su apellido'),
     body('email').isEmail().withMessage('Ingrese un email válido'),
     body('password').isLength({ min: 8 }).withMessage('Ingrese una contraseña'),
+    body('image').custom((value, { req }) => {
+		let file = req.file;
+		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		
+			let fileExtension = path.extname(file.originalname);
+			if (!acceptedExtensions.includes(fileExtension)) {
+				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+			}
+
+		return true;
+	})
+
 ]
+
+
+   
