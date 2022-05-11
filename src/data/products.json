@@ -497,13 +497,5 @@
   "image": "default-image.jpg",
   "type": "mas-vendido",
   "size": "1kg"
- },
- {
-  "id": 51,
-  "name": "mateeeeeeeee",
-  "description": "ok",
-  "category": "",
-  "price": "122",
-  "image": "image-1649356152281.jpg"
  }
 ]

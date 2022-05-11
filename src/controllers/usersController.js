@@ -93,6 +93,14 @@ let usersController = {
         });
     },
 
+    // ELIMINAR UN USUARIO DE LA BASE DE DATOS
+    /*destroy : (req, res) => {
+		let id = req.params.id;
+		let finalUser = allUsers.filter(user => user.id != id);
+		fs.writeFileSync(usersFilePath, JSON.stringify(finalUser, null, ' '));
+		res.redirect('/');
+		},*/
+
     
 
     profile: (req,res) => {

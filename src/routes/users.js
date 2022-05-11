@@ -44,6 +44,9 @@ router.get('/register', guestMiddleware, usersController.register);
 // Procesamiento de formulario de registro
 router.post('/register', upload.any(), validateRegisterMiddleware, usersController.store);
 
+// Eliminar un usuario de la base de datos
+//*router.delete('/delete/:id', usersController.destroy);*//
+
 // Perfil de usuario
 router.get('/profile', authMiddleware, usersController.profile);
 
