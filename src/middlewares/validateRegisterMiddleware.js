@@ -7,6 +7,14 @@ module.exports = [
     body('last_name').notEmpty().withMessage('Ingrese su apellido'),
     body('email').isEmail().withMessage('Ingrese un email válido'),
     body('password').isLength({ min: 8 }).withMessage('Ingrese una contraseña'),
+	body('password_confirm').custom((value, {req})=> {
+		if(req.body.password != req.body.password_confirm){
+			throw new Error('Las contraseñas no coinciden')
+		}
+		else{
+			return true;
+		}
+	}),
     body('image').custom((value, { req }) => {
 		if (req.files[0] == undefined) {
 			return true;
