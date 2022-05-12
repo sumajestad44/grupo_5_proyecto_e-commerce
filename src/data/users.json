@@ -205,5 +205,14 @@
   "password": "$2a$10$WhYN4QtJzZGVt5RvKKrjGup4k18ghrleUYIW1DV1GgPAtAsFXRQuK",
   "category": "User",
   "image": "image-1652313113003.gif"
+ },
+ {
+  "id": 24,
+  "first_name": "sam",
+  "last_name": "sepiol",
+  "email": "123@gmail.com",
+  "password": "$2a$10$7.mcSaEFuXDVoA/T0AMqWeGTnUwpKKBRyI4UQ5V0LpXbMTjTnpXHm",
+  "category": "User",
+  "image": "default-user.png"
  }
 ]

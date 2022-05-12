@@ -9,7 +9,7 @@
     <%- include('./partials/header') %> 
 
     <main class="register">
-        <form action="/register" method="POST" enctype="multipart/form-data">
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
             <div class="datos-usuario-register">
                 <label for="nombre">Nombre: </label>
                 <input type="text" name="first_name" id="first_name">
@@ -59,7 +59,7 @@
                 <input class="btn" type="submit" value="Registrarse">
             </div>
             <div class="red-register">
-                <a href="/login">¿Ya tenés una cuenta?</a>
+                <a href="/users/login">¿Ya tenés una cuenta?</a>
             </div>
             <br>
             <br>
