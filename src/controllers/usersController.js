@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs')
 
-const User = require('../models/User')
+const User = require('../models/User');
+const { redirect } = require('express/lib/response');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const allUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -80,7 +81,7 @@ let usersController = {
             if (isOkThePassword) {
                 delete userLogin.password;
                 req.session.userLogged = userLogin;
-                return res.redirect('/');
+                return res.redirect('/users/profile');
             }
         }
       
@@ -104,7 +105,10 @@ let usersController = {
     
 
     profile: (req,res) => {
-        return res.render('usersProfile');
+        console.log(req.session.userLogged);
+        return res.render('users/usersProfile', {
+            user: req.session.userLogged,
+        });
     },
 
     logout: (req,res)=>{
