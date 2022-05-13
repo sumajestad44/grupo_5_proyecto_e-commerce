@@ -30,11 +30,11 @@ router.get('/cart', authMiddleware, productsController.productCart);
 router.get('/detail/:id', productsController.productDetail);
 
 /*** CREAR UN PRODUCTO ***/ 
-router.get('/create', productsController.create); 
+router.get('/create', authMiddleware, productsController.create); 
 router.post('/', upload.any(), productsController.store); 
 
 /*** EDITAR UN PRODUCTO ***/
-router.get('/edit/:id', productsController.edit);
+router.get('/edit/:id', authMiddleware, productsController.edit);
 router.put('/edit/:id', upload.any(), productsController.update);
 
 /*** BORRAR UN PRODUCTO ***/
