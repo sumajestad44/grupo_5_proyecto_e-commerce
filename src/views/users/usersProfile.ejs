@@ -10,8 +10,16 @@
                     <h2><%= user.last_name %></h2>
                     <h2><%= user.email %></h2>
                     <figure class="product-box_image">
+                        <h2>Foto de perfil:</h2>
                         <img src="/images/users/<%= user.image %>" alt="imagen de producto">
+                        <H2>Subir una nueva foto de perfil:</H2>
+                        <input type="file" name="image" id="image">
                     </figure>
+                        <div class="buttons">
+                            <form action="/users/logout" method="get">
+                            <input class="btn" type="submit" value="Cerrar sesión">
+                            </form>
+                        </div>
             </section>
         </div>
 

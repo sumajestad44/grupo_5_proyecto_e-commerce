@@ -7,6 +7,9 @@ const {body} = require('express-validator');
 //********** CONTROLLERS REQUIRES ***************//
 const productsController = require('../controllers/productsController');
 
+//********** MIDDLEWARES ***********************//
+const authMiddleware = require('../middlewares/authMiddleware');
+
 //********* MULTER *********//
 var storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -19,6 +22,9 @@ var storage = multer.diskStorage({
 var upload= multer({
     storage: storage,
 });
+
+//* CARRITO *//
+router.get('/cart', authMiddleware, productsController.productCart);
 
 /** DETALLE DE PRODUCTO ESPECIFICO */
 router.get('/detail/:id', productsController.productDetail);
