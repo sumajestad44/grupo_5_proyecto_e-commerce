@@ -9,19 +9,23 @@ const methodOverride = require('method-override');
 const mainRouter = require('./routes/main');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
-/* const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); */
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 const app = express();
 
-/* app.use(userLoggedMiddleware); */
+
 
 // middleware de aplicacion
+
 
 app.use(session({
   secret: 'texto secreto',
   resave: false,
   saveUninitialized: false,
 }));
+
+
+/* app.use(userLoggedMiddleware); */
 
 
 // view engine setup

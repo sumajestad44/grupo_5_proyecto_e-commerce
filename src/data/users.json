@@ -214,5 +214,14 @@
   "password": "$2a$10$7.mcSaEFuXDVoA/T0AMqWeGTnUwpKKBRyI4UQ5V0LpXbMTjTnpXHm",
   "category": "User",
   "image": "default-user.png"
+ },
+ {
+  "id": 25,
+  "first_name": "nachoooo",
+  "last_name": "nacho123123",
+  "email": "asdasd@gmail.com",
+  "password": "$2a$10$AAFmmy1IsmKlI5KoXPbJYuCHZolkTa/L1Xkqnv6x4UIUHuokNoeQ6",
+  "category": "User",
+  "image": "default-user.png"
  }
 ]
