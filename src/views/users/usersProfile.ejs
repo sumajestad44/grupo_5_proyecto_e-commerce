@@ -13,8 +13,13 @@
                         <h2>Foto de perfil:</h2>
                         <img src="/images/users/<%= user.image %>" alt="imagen de producto">
                         <H2>Subir una nueva foto de perfil:</H2>
+                    <form action="/users/profile" method="PUT" enctype="multipart/form-data">
                         <input type="file" name="image" id="image">
                     </figure>
+                    <div class="buttons">
+                        <button type="submit" class="button-update">Subir foto</button>
+                    </div>
+                    </form>
                         <div class="buttons">
                             <form action="/users/logout" method="get">
                             <input class="btn" type="submit" value="Cerrar sesión">

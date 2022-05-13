@@ -27,7 +27,6 @@ let usersController = {
             });
         }
         //**************************************//
-        console.log(resultValidation);
 
         //****** PERMITE QUE EL USUARIO NO SE REGISTRE CON UN EMAIL YA REGISTRADO ********//
         let userInDb = User.findByField('email', req.body.email);
@@ -67,7 +66,6 @@ let usersController = {
     },
 
     login: (req, res) => {
-        console.log(req.session);
         return res.render('login');
     },
 
@@ -75,12 +73,15 @@ let usersController = {
         let userLogin = User.findByField('email', req.body.email);
 
         if (userLogin) {
-            console.log(req.body.password)
           let isOkThePassword = bcrypt.compareSync(req.body.password, userLogin.password)
-          console.log(userLogin.password)
             if (isOkThePassword) {
                 delete userLogin.password;
                 req.session.userLogged = userLogin;
+
+                if(req.body.recordarUsuario){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2 });
+                }
+
                 return res.redirect('/users/profile');
             }
         }
@@ -105,13 +106,14 @@ let usersController = {
     
 
     profile: (req,res) => {
-        console.log(req.session.userLogged);
+        console.log(req.cookies.userEmail)
         return res.render('users/usersProfile', {
             user: req.session.userLogged,
         });
     },
 
     logout: (req,res)=>{
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/')
     }

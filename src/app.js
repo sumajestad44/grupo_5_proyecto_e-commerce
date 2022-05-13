@@ -2,7 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
-const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
 
@@ -24,8 +24,9 @@ app.use(session({
   saveUninitialized: false,
 }));
 
+app.use(cookies());
 
-/* app.use(userLoggedMiddleware); */
+app.use(userLoggedMiddleware);
 
 
 // view engine setup
@@ -35,7 +36,7 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
 

@@ -12,7 +12,7 @@ const {body} = require('express-validator');
 const validateRegisterMiddleware = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
-const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
+
 
 //********* MULTER *********//
 var storage = multer.diskStorage({
@@ -37,7 +37,7 @@ var upload= multer({
 router.get('/login', guestMiddleware, usersController.login);
 
 // Procesamiento de formulario de login
-router.post('/login', userLoggedMiddleware, usersController.loginProcess);
+router.post('/login', usersController.loginProcess);
 
 // Register
 router.get('/register', guestMiddleware, usersController.register);
