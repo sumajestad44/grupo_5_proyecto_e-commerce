@@ -9,6 +9,7 @@ const productsController = require('../controllers/productsController');
 
 //********** MIDDLEWARES ***********************//
 const authMiddleware = require('../middlewares/authMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 //********* MULTER *********//
 var storage = multer.diskStorage({
@@ -30,11 +31,11 @@ router.get('/cart', authMiddleware, productsController.productCart);
 router.get('/detail/:id', productsController.productDetail);
 
 /*** CREAR UN PRODUCTO ***/ 
-router.get('/create', authMiddleware, productsController.create); 
+router.get('/create', adminMiddleware, productsController.create); 
 router.post('/', upload.any(), productsController.store); 
 
 /*** EDITAR UN PRODUCTO ***/
-router.get('/edit/:id', authMiddleware, productsController.edit);
+router.get('/edit/:id', adminMiddleware, productsController.edit);
 router.put('/edit/:id', upload.any(), productsController.update);
 
 /*** BORRAR UN PRODUCTO ***/
