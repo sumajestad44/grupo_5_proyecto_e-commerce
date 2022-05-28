@@ -23,6 +23,9 @@ const controller = {
 			});
     },
 
+	subs:(req, res) => {
+		return res.render('subs');
+	},
 
 
 	/* VISTA DE FORMULARIO DE CREACIÓN DE PRODUCTOS */
