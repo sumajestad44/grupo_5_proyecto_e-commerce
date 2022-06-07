@@ -12,24 +12,24 @@
     <%- include('./partials/header') %> 
 
 
-<div class="container products-wrapper">
+<div class="container">
     <div class="row">
-        <div class="col-12">
-            <h2 class="products-title">Todos los productos</h2>
+        <div class="titulo-productos">
+            <h2>Todos los productos</h2> 
         </div>
         <% products.forEach(el=> { %> 
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="products-container">
             <section class="product-box">
                 <a href="/products/detail/<%= el.id %>">
                     <p><%= el.name %></p>
-                    <figure class="product-box_image">
+                    <figure class="product-image">
                         <img src="/images/products/<%= el.image %>" alt="imagen de producto">
                     </figure>
                     <p><%= el.description %></p>
                     <p><%= el.category %></p>
                     <p><%= el.type %></p>
                     <p><%= el.size %></p>
-                    <article class="product-box_data">
+                    <article class="product-price">
                         <h2>$<%= el.price %></h2>
                         
                         <i class="fas fa-truck"></i>
