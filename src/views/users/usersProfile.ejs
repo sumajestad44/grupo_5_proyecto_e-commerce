@@ -6,25 +6,37 @@
 
         <div class="profile-container">
             <section class="product-box">
-                    <h2><%= user.first_name %></h2>
-                    <h2><%= user.last_name %></h2>
-                    <h2><%= user.email %></h2>
-                    <figure class="product-box_image">
-                        <h2>Foto de perfil:</h2>
-                        <img src="/images/users/<%= user.image %>" alt="imagen de producto">
-                        <H2>Subir una nueva foto de perfil:</H2>
+
+            <div class="image-container">
+                <figure class="product-box_image">
+                    <h2>Foto de perfil:</h2>
+                    <img src="/images/users/<%= user.image %>" alt="imagen de producto">
+                </figure>
+
+                <div class="image-update">
                     <form action="/users/profile" method="PUT" enctype="multipart/form-data">
-                        <input type="file" name="image" id="image">
-                    </figure>
+                    <H2>Subir una nueva foto de perfil:</H2>
+                    <input type="file" name="image" id="image">
                     <div class="buttons">
-                        <button type="submit" class="button-update">Subir foto</button>
+                        <button type="submit" class="btn-update">Subir foto</button>
                     </div>
                     </form>
-                        <div class="buttons">
-                            <form action="/users/logout" method="get">
-                            <input class="btn" type="submit" value="Cerrar sesión">
-                            </form>
-                        </div>
+                </div>
+            </div>
+
+                <div class="data-user">
+                    <h2>Nombre: <%= user.first_name %></h2>
+                    <h2>Apellido: <%= user.last_name %></h2>
+                    <h2>Correo electrónico: <%= user.email %></h2>
+                </div>
+
+                <div class="logout">
+                    <form action="/users/logout" method="get">
+                    <input class="btn" type="submit" value="Cerrar sesión">
+                    </form>
+                </div>
+
+
             </section>
         </div>
 

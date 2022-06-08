@@ -132,25 +132,25 @@
    }
     
    .table1 a{
-     color: #5b8e0a;;
+     color: #5b8e0a;
    }
    .table2 a{
-     color: #5b8e0a;;
+     color: #5b8e0a;
    }
    .table3 a{
-     color: #5b8e0a;;
+     color: #5b8e0a;
    }
     
    .table1 a:hover{
-   background-image: linear-gradient(to right top, #1673ff, #0083ff, #0092fd, #019ff8, #3cabf2);
+   background-image: linear-gradient(to right top, #5b8e0a, #6b912e, #85a551, #a2bc7a, #c0dc98);
      color: #fff;
    }
    .table2 a:hover{
-     background-image: linear-gradient(to right top, #e3404e, #e14556, #df4a5d, #dd4f64, #da546b);
+     background-image: linear-gradient(to right top, #5b8e0a, #6b912e, #85a551, #a2bc7a, #c0dc98);
      color: #fff;
    }
    .table3 a:hover{
-   background-image: linear-gradient(to right top, #ffc75f, #fecd50, #fad341, #f4da2e, #ebe212);
+   background-image: linear-gradient(to right top, #5b8e0a, #6b912e, #85a551, #a2bc7a, #c0dc98);
      color: #fff;
    }
     
