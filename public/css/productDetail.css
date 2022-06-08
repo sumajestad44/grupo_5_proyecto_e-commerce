@@ -11,10 +11,14 @@
 
 .img-producto {
     display: flex;
-    
     margin: 20px 5px 20px 20px;
     border: 1px solid var(--black);
     box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+.img-producto img {
+    height: 350px;
+    width: 350px;
 }
 
 /* PRODUCT DETAIL */

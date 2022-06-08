@@ -232,5 +232,14 @@
   "password": "$2a$10$OckWpyxDssTCaXE4j9VVYeVL5nIlHLaaG.idoafVgyXPKrZTFLjke",
   "category": "Admin",
   "image": "default-user.png"
+ },
+ {
+  "id": 27,
+  "first_name": "Ignacio",
+  "last_name": "Biglieri",
+  "email": "nachobiglieri@gmail.com",
+  "password": "$2a$10$LhB.Xuy73cHoLkkRb9ao2.vyChzMevbEMdQXR9iv7ssVe00VreERK",
+  "category": "User",
+  "image": "default-user.png"
  }
 ]
