@@ -106,7 +106,7 @@ CREATE TABLE `products` (
   `description` varchar(100) NOT NULL,
   `idCategory` int(11) NOT NULL,
   `price` decimal(10,0) NOT NULL,
-  `image` tinyint(1) NOT NULL,
+  `image` varchar(100) NOT NULL,
   `size` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `products_FK` (`idCategory`),
@@ -137,7 +137,7 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `category` varchar(100) NOT NULL,
-  `image` tinyint(1) DEFAULT NULL,
+  `image` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
