@@ -241,5 +241,14 @@
   "password": "$2a$10$LhB.Xuy73cHoLkkRb9ao2.vyChzMevbEMdQXR9iv7ssVe00VreERK",
   "category": "User",
   "image": "default-user.png"
+ },
+ {
+  "id": 28,
+  "first_name": "Ignacio",
+  "last_name": "Biglieri",
+  "email": "qwerty@gmail.com",
+  "password": "$2a$10$eDehhb2/x.SxW/4S4XnsmONGTehBTh9saRolCdpcISTk.fh7UvSTS",
+  "category": "User",
+  "image": "default-user.png"
  }
 ]

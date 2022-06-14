@@ -13,10 +13,10 @@
             <div class="update-product"> 
 
                 <label for="name">Nombre del producto: </label>
-                <input type="text" id="name" name="name" value="<%=product.name%>">
+                <input type="text" id="name" name="name" value="<%=product.name%>" required minlength="5">
 
                 <label for="description">Descripción: </label>
-                <textarea name="description" id="description" maxlength="255"><%=product.description%></textarea>
+                <textarea name="description" id="description" minlength="20" maxlength="255"><%=product.description%></textarea>
             
 
                 <label for="category">Categoría:</label>

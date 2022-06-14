@@ -17,14 +17,14 @@
 .row {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	margin: 3px 5px 3px 5px;
+	justify-content: space-between;
+	margin: 30px 150px 30px 150px;
 }
 
 .products-container {
 	height: 450px;
-	width: 300px;
-	margin: 5px 5px 5px 5px;
+	width: 350px;
+	margin: 25px 5px;
 	
 }
 

@@ -12,10 +12,10 @@
         <form action="/products" method="POST" enctype="multipart/form-data">
             <div class="create-product"> 
                 <label for="name">Nombre del producto: </label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required minlength="5">
 
                 <label for="description">Descripción: </label>
-                <textarea name="description" id="description" maxlength="255"></textarea>
+                <textarea name="description" id="description" minlength="20" maxlength="255"></textarea>
             
 
                 <label for="category">Categoría:</label>

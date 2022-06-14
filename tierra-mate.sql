@@ -52,7 +52,7 @@ DROP TABLE IF EXISTS `categories`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
-  `idProduct` decimal(10,0) NOT NULL,
+  `idProduct` int(11) NOT NULL,
   `productName` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

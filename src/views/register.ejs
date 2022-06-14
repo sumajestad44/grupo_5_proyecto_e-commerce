@@ -12,35 +12,35 @@
         <form action="/users/register" method="POST" enctype="multipart/form-data">
             <div class="datos-usuario-register">
                 <label for="nombre">Nombre: </label>
-                <input type="text" name="first_name" id="first_name">
+                <input type="text" name="first_name" id="first_name" required minlength="2">
                 <% if (locals.errors && errors.first_name) { %>
                  <div class="text-danger">
                     <%= errors.first_name.msg %>
                  </div>
                 <% } %>
                 <label for="apellido">Apellido: </label>
-                <input type="text" name="last_name" id="last_name">
+                <input type="text" name="last_name" id="last_name" required minlength="2">
                 <% if (locals.errors && errors.last_name) { %>
                     <div class="text-danger">
                        <%= errors.last_name.msg %>
                     </div>
                    <% } %>
                 <label for="email">Correo electrónico: </label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
                 <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
                        <%= errors.email.msg %>
                     </div>
                    <% } %>
                 <label for="pass">Contraseña: </label>
-                <input type="password" name="password" id="password" minlength="8">
+                <input type="password" name="password" id="password" minlength="8" required>
                 <% if (locals.errors && errors.password) { %>
                     <div class="text-danger">
                        <%= errors.password.msg %>
                     </div>
                    <% } %>
                 <label for="pass_confirm">Contraseña (confirmación): </label>
-                <input type="password" name="password_confirm" id="password_confirm" minlength="8">
+                <input type="password" name="password_confirm" id="password_confirm" minlength="8" required>
                 <% if (locals.errors && errors.password_confirm) { %>
                     <div class="text-danger">
                        <%= errors.password_confirm.msg %>

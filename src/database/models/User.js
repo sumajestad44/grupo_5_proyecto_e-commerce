@@ -2,32 +2,42 @@ const Sequelize = require('sequelize');
 const sequelize = require('../database'); 
 
 module.exports = (sequelize, DataTypes) => {
-	let User
+	let alias = 'Users'
     let cols = {
         id: {
             type: DataTypes.INTEGER(11),
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true,
+            unique: true
           },
-          name:{
-              type: DataTypes.STRING
+        name:{
+            type: DataTypes.STRING(100)
           },
-          lastName: {
-              type: DataTypes.STRING
+        lastName: {
+            type: DataTypes.STRING(100)
           },
-          email: {
-            type: DataTypes.STRING
+        email: {
+            type: DataTypes.STRING(100)
         },
         password: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING(100)
         },
         category: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING(100)
         },
-        Image: {
-            type: DataTypes.STRING
+        image: {
+            type: DataTypes.STRING(100)
         }
 
+    };
+
+    let config = {
+        tableName: 'users',
+        timestamps: false
     }
-        return User
+
+    let User = sequelize.define(alias, cols, config)
+
+    return User
 };

@@ -34,9 +34,6 @@ const controller = {
 	},
 	
 
-
-
-
 	// Creación de producto -  Método para almacenar
 	store: (req, res) => {
 		let image
@@ -56,8 +53,6 @@ const controller = {
 	},
 
 
-
-
 		// Actualizar - Formulario para editar
 		edit: (req, res) => {
 			let id = req.params.id
@@ -67,9 +62,6 @@ const controller = {
 			
 			});
 		},
-
-
-
 
 		// Actualizar - Método para actualizar
 		update: (req, res) => {
