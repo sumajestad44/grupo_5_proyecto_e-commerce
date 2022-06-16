@@ -3,30 +3,34 @@
 
 
 .profile-container{
-    margin-top: 100px;
-    
+    margin: 100px auto;
+    display: flex;
 }
 
 .product-box{
     display: flex;
     flex-direction: row;
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .product-box_image{
     width: 22%;
 }
 .product-box_image img{
-    width: 200px;
-    height: 150;
+    width: 190px;
+    height: 150px;
 }
 
 .image-container{
     flex-direction: column;
     justify-content: center;
-    text-align:left;
 }
 
+.image-update{
+    margin-top: 2rem;
+}
 
 .btn-update{
     margin-top: 1rem;
@@ -36,6 +40,7 @@
     color: var(black);
     background: var(--white-grey);
     cursor: pointer;
+    border: 1px solid rgb(100, 97, 97);
 }
 
 .btn-update:hover{
@@ -44,4 +49,14 @@
 
 .data-user{
     flex-direction: row;
+}
+
+.data-user h2{
+   padding: 20px;
+}
+
+.logout{
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
 }
