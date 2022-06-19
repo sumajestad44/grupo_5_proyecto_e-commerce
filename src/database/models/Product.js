@@ -1,6 +1,3 @@
-const Sequelize = require('sequelize');
-const sequelize = require('../database'); 
-
 module.exports = (sequelize, DataTypes) => {
     let alias = 'Products'
     let cols = {
@@ -17,9 +14,8 @@ module.exports = (sequelize, DataTypes) => {
         description: {
             type: DataTypes.STRING(100)
         },
-        idCategory: {
-            type: DataTypes.INTEGER(11),
-            unique: true
+        category: {
+            type: DataTypes.STRING
         },
         price: {
             type: DataTypes.DECIMAL(10,0)
@@ -38,10 +34,6 @@ module.exports = (sequelize, DataTypes) => {
 }
 
     let Product = sequelize.define(alias, cols, config)
-
-    Product.associate = function(models){
-        Product.belongsTo(models.Category, {foreignKey: 'idProduct'})
-    }
 
 
   return Product

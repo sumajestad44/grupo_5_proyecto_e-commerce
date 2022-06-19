@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -9,7 +10,11 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
     home: (req, res) => {
-        return res.render('home');
+		db.Products.findAll()
+		.then(function(products){
+			return res.render('home');
+		})
+        
     },
     productCart: (req, res) => {
         return res.render('productCart');

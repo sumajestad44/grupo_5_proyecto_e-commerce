@@ -44,30 +44,6 @@ LOCK TABLES `cart` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `categories`
---
-
-DROP TABLE IF EXISTS `categories`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
-  `idProduct` int(11) NOT NULL,
-  `productName` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `categories`
---
-
-LOCK TABLES `categories` WRITE;
-/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `productcart`
 --
 
@@ -104,14 +80,13 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `description` varchar(100) NOT NULL,
-  `idCategory` int(11) NOT NULL,
+  `category` varchar(10) NOT NULL,
   `price` decimal(10,0) NOT NULL,
   `image` varchar(100) NOT NULL,
   `size` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `products_FK` (`idCategory`),
-  CONSTRAINT `products_FK` FOREIGN KEY (`id`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  KEY `products_FK` (`category`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -120,6 +95,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (1,'Yerba saborizada','Bombilla de alpaca de la mejor calidad','Yerba',824,'http://dummyimage.com/186x216.png/5fa2dd/ffffff','1'),(2,'Mate Imperial','Yerba saborizada especial para tereré sabor frutilla','Accesorios',638,'http://dummyimage.com/197x202.png/5fa2dd/ffffff','2'),(3,'Yerba saborizada','Yerba saborizada especial para tereré sabor frutilla','Mate',492,'http://dummyimage.com/234x233.png/5fa2dd/ffffff','3'),(4,'Bombilla de alpaca','Mate uruguayo imperial premium boca ancha','Mate',302,'http://dummyimage.com/228x231.png/cc0000/ffffff','4'),(5,'Bombilla de alpaca','Bombilla de alpaca de la mejor calidad','Mate',791,'http://dummyimage.com/185x196.png/ff4444/ffffff','5');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -164,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-08 19:51:29
+-- Dump completed on 2022-06-16 15:29:54

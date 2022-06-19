@@ -1,6 +1,3 @@
-const Sequelize = require('sequelize');
-const sequelize = require('../database'); 
-
 module.exports = (sequelize, DataTypes) => {
     let alias = 'Carts'
     let cols = {
@@ -33,9 +30,10 @@ module.exports = (sequelize, DataTypes) => {
 
     let Cart = sequelize.define(alias, cols, config)
 
-    Cart.associate = function(models){
+   /*  Cart.associate = function(models){
         Cart.belongsTo(models.User, {foreignKey: 'idUsers'})
-    }
+    } */
 
-  return Product
+  return Cart
+  
   }
