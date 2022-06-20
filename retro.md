@@ -26,3 +26,24 @@
 - Continuar: reuniendonos presencialmente.
 - Hacer menos: cambios provisorios.
 - Dejar de: no pedir ayuda a los profes.
+
+## Sprint 6 - Bases de Datos
+- Comenzar a: reforzar conceptos básicos.
+- Hacer más: lista de pendientes.
+- Continuar: completando tareas en órden.
+- Hacer menos: aplazar errores.
+- Dejar de: subir progresos incompletos.
+
+## Sprint 7 - Validaciones (Back + Front)
+- Comenzar a: completar tareas en el plazo de tiempo.
+- Hacer más: reuniones.
+- Continuar: trabajando colaborativamente.
+- Hacer menos: comentarios generales.
+- Dejar de: acumular trabajo.
+
+## Sprint 8 - APIs + React
+- Comenzar a: probar métodos de organización.
+- Hacer más: desafíos.
+- Continuar: sumando cambios.
+- Hacer menos: tareas al azar.
+- Dejar de: participar poco.
