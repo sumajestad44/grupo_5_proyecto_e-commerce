@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const upload = require('../middlewares/multer')
 
 const usersController = require('../controllers/usersController');
 
@@ -15,7 +16,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 
 //********* MULTER *********//
-var storage = multer.diskStorage({
+/* var storage = multer.diskStorage({
     destination: function(req, file, cb){
         cb(null, path.join(__dirname, '../../public/images/users') );
     },
@@ -24,15 +25,14 @@ var storage = multer.diskStorage({
     }
 })
 var upload= multer({
-    storage: storage,
-});
+    storage : storage, 
+}); */
+
 //****************************** */
 
 
-
-
-
 // RUTAS
+
 // Login
 router.get('/login', guestMiddleware, usersController.login);
 
@@ -43,10 +43,10 @@ router.post('/login', usersController.loginProcess);
 router.get('/register', guestMiddleware, usersController.register);
 
 // Procesamiento de formulario de registro
-router.post('/register', upload.any(), validateRegisterMiddleware, usersController.store);
+router.post('/register', upload.single('image'), /* validateRegisterMiddleware, */ usersController.store);
 
 // Eliminar un usuario de la base de datos
-//*router.delete('/delete/:id', usersController.destroy);*//
+router.delete('/delete/:id', usersController.destroy);
 
 // Perfil de usuario
 router.get('/profile', authMiddleware, usersController.profile);

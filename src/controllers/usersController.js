@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs')
 
 const User = require('../models/User');
 const { redirect } = require('express/lib/response');
+const db = require('../database/models');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const allUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -18,18 +19,28 @@ let usersController = {
     },
     // FUNCIÓN DE CREACIÓN DE USUARIO
     store: function(req, res){
-        const resultValidation = validationResult(req);
-
-        //*****  VERIFICA SI HAY ERRORES *******//
-        if(resultValidation.errors.length>0){
-            return res.render('register', {
-                errors: resultValidation.mapped()
-            });
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+          return res.render("users/register", {
+            errors: errors.errors,
+            oldData: req.body
+          });
         }
-        //**************************************//
+        db.Users.create({
+          name: req.body.first_name,
+          lastName: req.body.last_name,
+          email: req.body.email,
+          password: bcrypt.hashSync(req.body.password, 10),
+          category: req.body.category,
+          image: req.file.filename
+        })
+        res.redirect("/users/login")
+        
+    },
 
         //****** PERMITE QUE EL USUARIO NO SE REGISTRE CON UN EMAIL YA REGISTRADO ********//
-        let userInDb = User.findByField('email', req.body.email);
+
+        /* let userInDb = User.findByField('email', req.body.email);
         if(userInDb){
             return res.render('register', {
                 errors: {
@@ -39,38 +50,51 @@ let usersController = {
                 },
                 oldData: req.body,
             })
-        }
+        } */
+
         //********************************************************************************//
 
 
-        let category = "User"; // definir la categoria
-        let image // definir la imagen
+  /*       let category = "User"; 
+        let image 
 		if(req.files[0] != undefined){
 			image = req.files[0].filename
 		} else {
 			image = 'default-user.png'
-		}; // logica para que tome la imagen que se envia por el formulario y si no hay que ponga una por defecto
+		}; 
         let newUser = {
             id: allUsers[allUsers.length - 1].id + 1,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10), // uso bcrypt para encriptar la contraseña 
+            password: bcrypt.hashSync(req.body.password, 10),
             category: category,
             image: image,
-        }; // Creamos la variable newUser donde se va a almacenar toda la información que viene por body
-        allUsers.push(newUser); // y le hacemos push en users
-        fs.writeFileSync(usersFilePath, JSON.stringify(allUsers, null, ' ')); // no me acuerdo q hacia, creo que escribía sobre el json
-        res.redirect('/'); // y un redirect
-        
-    },
+        }; 
+        allUsers.push(newUser); 
+        fs.writeFileSync(usersFilePath, JSON.stringify(allUsers, null, ' ')); 
+    }, */
 
     login: (req, res) => {
+        
         return res.render('login');
     },
 
     loginProcess: (req,res) => {
-        let userLogin = User.findByField('email', req.body.email);
+        
+
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.render("login", {
+                errors: errors.errors,
+                oldData: req.body
+            })
+        }
+
+        db.Users.findAll()
+        .then(function(users){
+
+        let userLogin = users.find((i) => i.email == req.body.email);
 
         if (userLogin) {
           let isOkThePassword = bcrypt.compareSync(req.body.password, userLogin.password)
@@ -82,7 +106,7 @@ let usersController = {
                     res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2 });
                 }
 
-                return res.redirect('/users/profile');
+                return res.redirect('profile');
             }
         }
       
@@ -93,31 +117,32 @@ let usersController = {
                 }
             }
         });
-    },
+})
+},
 
     // ELIMINAR UN USUARIO DE LA BASE DE DATOS
-    /*destroy : (req, res) => {
-		let id = req.params.id;
-		let finalUser = allUsers.filter(user => user.id != id);
-		fs.writeFileSync(usersFilePath, JSON.stringify(finalUser, null, ' '));
+    destroy : (req, res) => {
+		db.Users.destroy({
+            where:{
+                id: req.params.id
+            }
+        })
 		res.redirect('/');
-		},*/
+		},
 
-    
 
-    profile: (req,res) => {
-        console.log(req.cookies.userEmail)
-        return res.render('users/usersProfile', {
+     profile: (req,res) => {
+        
+        return res.render('users/usersProfile.ejs', {
             user: req.session.userLogged,
         });
-    },
+    }, 
 
     logout: (req,res)=>{
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/')
     }
-    
 }
 
 module.exports = usersController;

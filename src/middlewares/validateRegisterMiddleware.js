@@ -15,7 +15,7 @@ module.exports = [
 			return true;
 		}
 	}),
-    body('image').custom((value, { req }) => {
+    /* body('image').custom((value, { req }) => {
 		if (req.files[0] == undefined) {
 			return true;
 		  }
@@ -32,7 +32,7 @@ module.exports = [
 			}
 			return true;
 		  }
-		}),
+		}), */
 
 ]
 

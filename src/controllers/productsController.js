@@ -28,9 +28,9 @@ const controller = {
 			});
     },
 
-	subs:(req, res) => {
+/* 	subs:(req, res) => {
 		return res.render('subs');
-	},
+	}, */
 
 
 	/* VISTA DE FORMULARIO DE CREACIÓN DE PRODUCTOS */
@@ -41,70 +41,64 @@ const controller = {
 
 	// Creación de producto -  Método para almacenar
 	store: (req, res) => {
-		let image
-		if(req.files[0] != undefined){
-			image = req.files[0].filename
-		} else {
-			image = 'default-image.jpg'
-		};
-		let newProduct = {
-			id: products[products.length - 1].id + 1,
-			...req.body,
-			image: image,
-		};
-		products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/');
-	},
+		db.Users.create({
+			name: req.body.first_name,
+			lastName: req.body.last_name,
+			email: req.body.email,
+			password: bcrypt.hashSync(req.body.password, 10),
+			category: req.body.category,
+			image: req.file.filename
+		  })
+		  res.redirect("/products")
+		  
+	  },
 
 
 		// Actualizar - Formulario para editar
 		edit: (req, res) => {
-			let id = req.params.id
-			let product = products.find(product => product.id == id)
-			res.render('product-edit-form', {
-				product,
-			
-			});
+			db.Products.findByPk(req.params.id)
+			.then(function(producto){
+				res.render("product-edit-form", {producto:producto})
+			})
 		},
+		
 
 		// Actualizar - Método para actualizar
 		update: (req, res) => {
-			let id = req.params.id;
-			let productToEdit = products.find(product => product.id == id)
-			let image
-			if(req.files[0] != undefined){
-				image = req.files[0].filename
-			} else {
-				image = productToEdit.image
-			}
-			productToEdit = {
-				id: productToEdit.id,
-				...req.body,
-				image: image,
-			};
-			let newProducts = products.map(product => {
-				if (product.id == productToEdit.id) {
-					return product = {...productToEdit};
-				}
-				return product;
-			})
-			fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-			res.redirect('/');
+			db.Products.update({
+				name: req.body.name,
+				desciption: req.body.desciption,
+				category: req.body.category,
+				price: req.body.price,
+				image: req.file.filename,
+				size: req.body.size,
 		},
+		{
+			where:{
+				id: req.params.id
+			}
+		})
+		res.redirect("/products/edit/" + req.params.id)
+	},
 
 
 		// Borrar un producto
 		destroy : (req, res) => {
-		let id = req.params.id;
-		let finalProd = products.filter(product => product.id != id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProd, null, ' '));
-		res.redirect('/');
+			db.Products.destroy({
+				where:{
+					id: req.params.id
+				}
+			})
+		res.redirect('/src/views/products.ejs');
 		},
 
 		//	Root - Show all products
 			index: (req, res) => {
-			res.render('products', {products});
+				db.Products.findAll()
+				.then(productos =>{
+				res.render('products', {productos})
+
+				})
 		},
 
 }

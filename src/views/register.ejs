@@ -10,6 +10,15 @@
 
     <main class="register">
         <form action="/users/register" method="POST" enctype="multipart/form-data">
+            <% if(typeof errors != 'undefined'){ %>
+                <ul class="claseInutil">
+                    <% for (let i = 0; i < errors.length; i++) { %>
+                        <li style="color:red" class="claseInutil">
+                            <%= errors[i].msg %>
+                        </li>
+                    <% } %> 
+                </ul>
+            <% } %>
             <div class="datos-usuario-register">
                 <label for="nombre">Nombre: </label>
                 <input type="text" name="first_name" id="first_name" required minlength="2">

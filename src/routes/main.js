@@ -6,7 +6,7 @@ const productsController = require('../controllers/productsController');
 
 router.get('/', productsController.home);
 
-router.get('/suscripciones', productsController.subs);
+/* router.get('/suscripciones', productsController.subs); */
 
 
 
