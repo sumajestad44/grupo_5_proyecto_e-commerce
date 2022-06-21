@@ -8,7 +8,7 @@
 
     
     <main class="login">
-        <form action="/users/login" method="POST">
+        <form action="/users/login" method="POST" class="loginForm">
             <div class="datos-usuario-login">
                 <label for="nombre">Email </label>
                 <input type="email" name="email" id="email" required placeholder="Tierra@Mate.com">
@@ -39,8 +39,12 @@
     </main>
 
 
+<footer>
+ <%- include('./partials/footer') %> 
+</footer>
+<script src="/validationsFront/validationLogin.js">
 
-
-    <%- include('./partials/footer') %> 
+</script>
+    
 </body>
 </html>
