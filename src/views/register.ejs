@@ -56,7 +56,7 @@
                     </div>
                    <% } %>
                 <label for="image">Foto de perfil:</label>
-                <input type="file" name="image" id="image">
+                <input type="file" name="image" id="image" required>
                 <% if (locals.errors && errors.image) { %>
                     <div class="text-danger">
                        <%= errors.image.msg %>

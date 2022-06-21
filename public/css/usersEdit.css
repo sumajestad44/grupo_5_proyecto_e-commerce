@@ -1,0 +1,39 @@
+@import url('home.css');
+@import url('normalize.css');
+.register {
+    padding-top: 1.6em;
+    min-height: 100vh;
+    background-color: #DEDEDE;
+    margin-top: 100px;
+}
+.register form {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+.register form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 0.7em 0;
+}
+.datos-usuario-register{
+    display: flex;
+    font-size: var(--text-lg);
+    flex-direction: column;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.red-register{
+    font-size: var(--text-s-sm);
+}
+.text-danger{
+    padding-bottom: 30px;
+    color: red;
+}

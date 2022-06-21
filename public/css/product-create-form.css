@@ -10,6 +10,11 @@
 h2 {
     display: flex;
     justify-content:center;
+    font-size: var(--title-md);
+}
+
+label{
+    font-size: var(--text-md);
 }
 
 .create-product {
@@ -19,7 +24,7 @@ h2 {
     align-items: center;
 }
 
-#name, #description,  #category, #price  {
+#name, #description, #category, #price, #size  {
     padding: 10px; 
     border-radius: 5px; 
     border: none;

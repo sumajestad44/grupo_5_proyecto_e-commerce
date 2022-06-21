@@ -20,7 +20,7 @@
         <% productos.forEach(el=> { %> 
         <div class="products-container">
             <section class="product-box">
-                <a href="/products/detail/<%= el.id %>">
+                <a class="product-a" href="/products/detail/<%= el.id %>">
                     <p class="product-name"><%= el.name %></p>
                     <figure class="product-image">
                         <img src="/images/products/<%= el.image %>" class="image" alt="imagen de producto">

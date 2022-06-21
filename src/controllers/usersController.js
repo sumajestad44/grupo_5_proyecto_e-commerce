@@ -2,10 +2,12 @@ const { validationResult } = require('express-validator');
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs')
+const upload = require('../middlewares/multer')
 
 const User = require('../models/User');
 const { redirect } = require('express/lib/response');
 const db = require('../database/models');
+const { resolveNaptr } = require('dns');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const allUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
@@ -76,12 +78,14 @@ let usersController = {
     }, */
 
     login: (req, res) => {
-        
+        db.Users.findByPk(req.params.id)
+        .then(user=>{
+            res.render('users/usersEdit',{user})
+        })
         return res.render('login');
     },
 
     loginProcess: (req,res) => {
-        
 
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -119,6 +123,26 @@ let usersController = {
         });
 })
 },
+    edit: (req,res)=>{
+        db.Users.findByPk(req.params.id)
+        .then((user)=>{
+            res.render('users/usersEdit',
+            {user:user})
+        })
+    },
+    update: (req, res)=>{
+        db.Users.update({
+            name: req.body.first_name,
+            lastName: req.body.last_name,
+            email: req.body.email,
+            image: req.file.filename
+        }, {
+            where:{
+                id: req.params.id
+            }
+        })
+        res.redirect('/users/profile')
+    },
 
     // ELIMINAR UN USUARIO DE LA BASE DE DATOS
     destroy : (req, res) => {
@@ -127,15 +151,19 @@ let usersController = {
                 id: req.params.id
             }
         })
-		res.redirect('/');
+		res.redirect('/users/login');
 		},
 
 
      profile: (req,res) => {
+
+        db.Users.findByPk(req.params.id)
+        .then((user)=>{
+            res.render('users/usersProfile',
+            {user:req.session.userLogged})
+        })
         
-        return res.render('users/usersProfile.ejs', {
-            user: req.session.userLogged,
-        });
+        
     }, 
 
     logout: (req,res)=>{

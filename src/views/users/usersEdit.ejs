@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %> 
+    <link rel="stylesheet" href="/css/usersEdit.css">
+
+<body>
+    
+    <%- include('../partials/header') %> 
+
+    <main class="register">
+        <form action="/users/edit/<%= user.id %>" method="POST" enctype="multipart/form-data">
+            <div class="datos-usuario-register">
+
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="first_name" id="first_name" required minlength="2" value="<%= user.name %>">
+
+        
+                <label for="apellido">Apellido: </label>
+                <input type="text" name="last_name" id="last_name" required minlength="2" value="<%= user.lastName %>">
+              
+
+                <label for="email">Correo electrónico: </label>
+                <input type="email" name="email" id="email" required value="<%= user.email %>">
+               
+
+                <label for="image">Foto de perfil:</label>
+                <input type="file" name="image" id="image" required>
+                
+            </div>
+<br>
+            <div class="buttons">
+                <input class="btn" type="submit" value="Editar usuario">
+            </div>
+
+            <div class="buttons">
+                <form action="/users/delete/<%= user.id %>" method="POST" enctype="multipart/form-data">
+                    <button type="submit" class="btn" >Eliminar usuario</button>
+                </form>
+            </div>
+
+        </form>
+        
+    </main>
+
+
+
+
+    <%- include('../partials/footer') %> 
+</body>
+</html>

@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const {body} = require('express-validator');
+const upload = require('../middlewares/multerProducts')
 
 //********** CONTROLLERS REQUIRES ***************//
 const productsController = require('../controllers/productsController');
@@ -12,7 +13,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
 
 //********* MULTER *********//
-var storage = multer.diskStorage({
+/* var storage = multer.diskStorage({
     destination: function(req, file, cb){
         cb(null, path.join(__dirname, '../../public/images/products') );
     },
@@ -22,7 +23,7 @@ var storage = multer.diskStorage({
 })
 var upload= multer({
     storage: storage,
-});
+}); */
 
 //* CARRITO *//
 router.get('/cart', authMiddleware, productsController.productCart);
@@ -31,15 +32,15 @@ router.get('/cart', authMiddleware, productsController.productCart);
 router.get('/detail/:id', productsController.productDetail);
 
 /*** CREAR UN PRODUCTO ***/ 
-router.get('/create', adminMiddleware, productsController.create); 
-router.post('/', upload.any(), productsController.store); 
+router.get('/create', /* adminMiddleware, */ productsController.create); 
+router.post('/create', upload.single('image'), productsController.store); 
 
 /*** EDITAR UN PRODUCTO ***/
-router.get('/edit/:id', adminMiddleware, productsController.edit);
-router.put('/edit/:id', upload.any(), productsController.update);
+router.get('/edit/:id', /* adminMiddleware, */ productsController.edit);
+router.post('/edit/:id', upload.single('image'), productsController.update);
 
 /*** BORRAR UN PRODUCTO ***/
-router.delete('/delete/:id', productsController.destroy);
+router.post('/delete/:id', productsController.destroy);
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index);

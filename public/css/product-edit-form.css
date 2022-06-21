@@ -1,5 +1,6 @@
 @import url('home.css');
 @import url('normalize.css');
+
 .update-form {
     margin-top: 150px;
     display: flex;
@@ -10,10 +11,15 @@
 h2 {
     display: flex;
     justify-content:center;
+    font-size: var(--title-md);
 }
 
-.update-product {
-    margin: 0px 500px 0px 500px;
+label{
+    font-size: var(--text-md);
+}
+
+.update-product{
+    margin: 0px 300px 0px 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +27,7 @@ h2 {
 
 
 
-#name, #description, #category, #price  {
+#name, #description, #category, #price, #size  {
     padding: 10px; 
     border-radius: 5px; 
     border: none;
@@ -44,7 +50,8 @@ h2 {
     justify-content: center;
 }
 
-.button-update {
+
+.button-update{
     padding: 10px; 
     border-radius: 5px; 
     border: none;
@@ -57,16 +64,17 @@ h2 {
     background: rgba(0, 116, 217, .2);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
+
 .delete {
     margin: 20px 500px 0px 500px;
     display: flex;
     justify-content: center;
 }
+
 .button-delete {
     padding: 10px; 
     border-radius: 5px; 
     border: none;
-    width: 45%;
     cursor: pointer;
     margin-bottom: 20px;
 }

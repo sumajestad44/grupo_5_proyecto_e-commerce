@@ -9,19 +9,11 @@
 
             <div class="image-container">
                 <figure class="product-box_image">
-                    <img src="/images/users/<%= user.image %>" alt="imagen de producto">
+                    <img src="/images/users/<%= user.image %>" alt="Imagen de perfil">
                 </figure>
-
-                <div class="image-update">
-                    <form action="/users/profile" method="PUT" enctype="multipart/form-data">
-                    <H2>Subir una nueva foto de perfil:</H2>
-                    <input type="file" name="image" id="image">
-                    <div class="buttons">
-                        <button type="submit" class="btn-update">Subir foto</button>
-                    </div>
-                    </form>
-                </div>
             </div>
+
+                
 
                 <div class="data-user">
                     <h2>Nombre: <%= user.name %></h2>
@@ -30,19 +22,15 @@
                 </div>
 
                 <div class="logout">
-                    <form action="/users/logout" method="get">
+                    <form action="/users/logout" method="GET">
                     <input class="btn" type="submit" value="Cerrar sesión">
                     </form>
+                    <a href="/users/edit/<%= user.id %>" type="button" class="btn" style="margin-left: 5px;">Editar usuario</a>
                 </div>
 
-
+                
             </section>
         </div>
-
-
-
-
-
 
     <%- include('../partials/footer') %> 
 </body>

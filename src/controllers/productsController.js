@@ -41,13 +41,13 @@ const controller = {
 
 	// Creación de producto -  Método para almacenar
 	store: (req, res) => {
-		db.Users.create({
-			name: req.body.first_name,
-			lastName: req.body.last_name,
-			email: req.body.email,
-			password: bcrypt.hashSync(req.body.password, 10),
+		db.Products.create({
+			name: req.body.name,
+			description: req.body.description,
 			category: req.body.category,
-			image: req.file.filename
+			price: req.body.price,
+			image: req.file.filename,
+			size: req.body.size
 		  })
 		  res.redirect("/products")
 		  
@@ -57,8 +57,8 @@ const controller = {
 		// Actualizar - Formulario para editar
 		edit: (req, res) => {
 			db.Products.findByPk(req.params.id)
-			.then(function(producto){
-				res.render("product-edit-form", {producto:producto})
+			.then(function(product){
+				res.render("product-edit-form", {product:product})
 			})
 		},
 		
@@ -66,19 +66,20 @@ const controller = {
 		// Actualizar - Método para actualizar
 		update: (req, res) => {
 			db.Products.update({
-				name: req.body.name,
-				desciption: req.body.desciption,
-				category: req.body.category,
-				price: req.body.price,
-				image: req.file.filename,
-				size: req.body.size,
+			name: req.body.name,
+			description: req.body.description,
+			category: req.body.category,
+			price: req.body.price,
+			image: req.file.filename,
+			size: req.body.size
 		},
 		{
 			where:{
 				id: req.params.id
 			}
 		})
-		res.redirect("/products/edit/" + req.params.id)
+		res.redirect("/products")
+		
 	},
 
 
@@ -89,7 +90,7 @@ const controller = {
 					id: req.params.id
 				}
 			})
-		res.redirect('/src/views/products.ejs');
+		res.redirect('/products');
 		},
 
 		//	Root - Show all products
