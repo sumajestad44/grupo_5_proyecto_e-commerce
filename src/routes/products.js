@@ -32,11 +32,11 @@ router.get('/cart', authMiddleware, productsController.productCart);
 router.get('/detail/:id', productsController.productDetail);
 
 /*** CREAR UN PRODUCTO ***/ 
-router.get('/create', /* adminMiddleware, */ productsController.create); 
+router.get('/create',  adminMiddleware, productsController.create); 
 router.post('/create', upload.single('image'), productsController.store); 
 
 /*** EDITAR UN PRODUCTO ***/
-router.get('/edit/:id', /* adminMiddleware, */ productsController.edit);
+router.get('/edit/:id',  adminMiddleware,  productsController.edit);
 router.post('/edit/:id', upload.single('image'), productsController.update);
 
 /*** BORRAR UN PRODUCTO ***/

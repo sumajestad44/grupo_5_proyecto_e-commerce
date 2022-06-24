@@ -28,13 +28,20 @@ let usersController = {
             oldData: req.body
           });
         }
+        let image = req.file
+		if(req.file != undefined){
+			image = req.file
+		} else {
+			image = 'default-user.png'
+		}; 
+        category = "User";
         db.Users.create({
           name: req.body.first_name,
           lastName: req.body.last_name,
           email: req.body.email,
           password: bcrypt.hashSync(req.body.password, 10),
-          category: req.body.category,
-          image: req.file.filename
+          category: "User",
+          image: image
         })
         res.redirect("/users/login")
         
