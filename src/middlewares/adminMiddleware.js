@@ -1,4 +1,4 @@
-/* function adminMiddleware(req,res,next) {
+ function adminMiddleware(req,res,next) {
     let userLogueado = res.locals.userLogged;
     if(userLogueado.category !== "Admin"){
         return res.redirect('/')
@@ -7,4 +7,4 @@
     
 }
 
-module.exports = adminMiddleware; */
+module.exports = adminMiddleware; 

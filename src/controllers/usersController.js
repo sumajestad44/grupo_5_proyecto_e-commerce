@@ -89,7 +89,7 @@ let usersController = {
 
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.render("login", {
+            return res.render("login", { 
                 errors: errors.errors,
                 oldData: req.body
             })
@@ -131,18 +131,35 @@ let usersController = {
         })
     },
     update: (req, res)=>{
+
+    const resultValidation = validationResult(req)
+    const id = req.params.id
+    
+    db.Users.findByPk(id)
+	.then((user)=>{
+
         db.Users.update({
             name: req.body.first_name,
             lastName: req.body.last_name,
             email: req.body.email,
-            image: req.file.filename
+            image: req.file == undefined ? user.image : req.file.filename
         }, {
             where:{
-                id: req.params.id
+                id: id
             }
         })
-        res.redirect('/users/profile')
-    },
+        req.session.userLogged = {
+            id:id,
+            name: req.body.first_name,
+            lastName: req.body.last_name,
+            email: req.body.email,
+            category: user.category,
+            image: req.file == undefined ? user.image : req.file.filename
+        },
+
+            res.redirect('/users/profile')
+    })
+},
 
     // ELIMINAR UN USUARIO DE LA BASE DE DATOS
     destroy : (req, res) => {
@@ -151,7 +168,15 @@ let usersController = {
                 id: req.params.id
             }
         })
-		res.redirect('/users/login');
+        .then(()=>{
+            console.log('hola');
+            req.session.destroy();
+            res.redirect('/users/login');
+        })
+        .catch((errors)=>{
+            console.log(errors);
+        })
+		
 		},
 
 
