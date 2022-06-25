@@ -101,5 +101,15 @@
 	align-items: center;
 	height: 50px;
 }
+.buttons {
+	margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color: var(--bg);
+    background: var(--main-color);
+    cursor: pointer;
+	margin: 30px;
+}
 
 

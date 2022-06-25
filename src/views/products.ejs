@@ -15,6 +15,14 @@
 <div class="titulo-productos">
     <h2>Todos los productos</h2> 
 </div>
+<% if (locals.userLogged) { %>
+    <% if (locals.userLogged.category == "Admin") { %>
+        <form action="/products/create">
+        <button class="buttons">Crear producto</button>
+        </form>
+<% } %>
+ 
+<% } %>
 <div class="container">
     <div class="row">
         <% productos.forEach(el=> { %> 
