@@ -134,3 +134,13 @@
     border: 1px solid var(--black);
     box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.4);
 }
+.buttons {
+	margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color: var(--bg);
+    background: var(--main-color);
+    cursor: pointer;
+	margin: 30px;
+}

@@ -17,9 +17,9 @@
 </div>
 <% if (locals.userLogged) { %>
     <% if (locals.userLogged.category == "Admin") { %>
-        <form action="/products/create">
+        <a href="/products/create">
         <button class="buttons">Crear producto</button>
-        </form>
+        </a>
 <% } %>
  
 <% } %>

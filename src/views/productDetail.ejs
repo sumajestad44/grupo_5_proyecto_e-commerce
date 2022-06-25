@@ -32,6 +32,14 @@
                     </select>
             <input type="submit" value="Agregar al carrito" class="button-detail">
         </div>
+        <% if (locals.userLogged) { %>
+            <% if (locals.userLogged.category == "Admin") { %>
+                <a href="/products/edit/<%= product.id %>">
+                <button class="buttons">Editar producto</button>
+                </a>
+        <% } %>
+         
+        <% } %>
     </div>
 </div>  
 <hr class="hr-detail">
