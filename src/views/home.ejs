@@ -15,139 +15,218 @@
 
 </head>
 <body>
+    <%- include('./partials/header') %>
 
-<!-- header section starts  -->
+    <!-- home section starts -->
+    <section class="home">
 
-<header class="header">
+        <div class="slides-container">
 
-    <a href="#" class="logo">
-        <img src="/images/logo.png" alt="">
-    </a>
+            <div class="slide active">
+                <div class="content">
+                    <span>Stockeate con nosotros</span>
+                    <h3>Los mejores productos</h3>
+                    <a href="#" class="btn">Ir a la tienda</a>
+                </div>
+                <div class="image">
+                    <img src="/images/home-img-1.png" alt="">
+                </div>
+            </div>
 
-    <nav class="navbar">
-        <a href="/products">Tienda</a>
-        <a href="/suscripciones">Suscripciones</a>
-        <a href="/users/login">Mi cuenta</a>
-    </nav>
+            <div class="slide">
+                <div class="content">
+                    <span>Selección de yerbas organicas</span>
+                    <h3>Saborea nuevas experiencias</h3>
+                    <a href="#" class="btn">Yerbas</a>
+                </div>
+                <div class="image">
+                    <img src="/images/home-img-2.png" alt="">
+                </div>
+            </div>
 
-    <a href="/products/cart">
-    <div class="icons">
-        <div class="fas fa-shopping-cart" id="cart-btn"></div>
-    </div>
-    </a>
+            <!-- <div class="slide">
+                <div class="content">
+                    <span>¿No sabés que regalar?</span>
+                    <h3>Copate con un mate</h3>
+                    <a href="#" class="btn">Mates</a>
+                </div>
+                <div class="image">
+                    <img src="/img/home-img-3.png" alt="">
+                </div>
+            </div> -->
 
-</header>
+        </div>
 
-<!-- header section ends -->
+        <div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
+        <div id="prev-slide" class="fas fa-angle-left" onclick="next()"></div>
 
-<!-- home section starts  -->
+    </section>
+    <!-- home section ends -->
 
-<section class="home" id="home">
+    <!-- about section starts  -->
 
-    <div class="content">
-        <h3>Sumate al club</h3>
-        <p>Una comunidad para fanáticos del mate</p>
-        <a href="/suscripciones" class="btn">Elegí tu suscripción</a>
-    </div>
+    <section class="about" id="about">
 
-</section>
-
-<!-- home section ends -->
-
-<!-- about section starts  -->
-
-<section class="about" id="about">
-
-    <h1 class="heading">Quienes <span>somos</span></h1>
-    <div class="row">
         <div class="image">
-            <img src="/images/default.png" alt="">
+            <img src="/images/about-img.jpg" alt="">
         </div>
+
         <div class="content">
-            <h3>¿Qué nos hace especiales?</h3>
-            <p>Un lazo entre productores y consumidores. Una comunidad para descubrir, disfrutar y aprender. El vínculo que nos conecta alrededor de un mate.</p>
+            <h3>Bienvenidos <span class="line-down">materos!</span></h3>
+            <p>El mate mucho más que una bebida, es una excusa para encontrarse, una costumbre familiar que se hereda y acompaña siempre.</p>
+            <p>Por eso te proponemos descubrir una experiencia completa junto a nuestro equipo encargado de seleccionar los mejores productos y marcas para vos!</p>
+            <a href="#" class="btn">Ver tienda</a>
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- about section ends -->
 
-<!-- about section ends -->
+    <!-- steps section starts  -->
 
-<!-- blogs section starts  -->
+    <section class="steps">
 
-<section class="blogs" id="blogs">
-
-    <h1 class="heading"> Asociate <span>en 3 simples pasos</span> </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <div class="image">
-                <img src="/images/default.png" alt="">
-            </div>
-            <div class="content">
-                <a href="#" class="title">Elegí tu membresía</a>
-                <p>Se trata de una suscripción mensual con la que vas a ser parte del club. Existen distintos planes, eso significa que todos los meses vas a recibir una caja pensada para ajustarse a tu consumo.</p>
-            </div>
+        <div class="heading">
+            <span>¿Cómo comprar?</span>
+            <h1>3 pasos</h1>
         </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="/images/default.png" alt="">
+        <div class="box-container">
+
+            <div class="box">
+                <img src="/images/step-1.svg" alt="">
+                <h3>Seleccioná tus productos</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, ducimus.</p>
+                <a href="#" class="btn">read more</a>
             </div>
-            <div class="content">
-                <a href="#" class="title">Detalla tus preferencias</a>
-                <p>Podes personalizar el pedido para que la yerba te llegue en el formato que prefieras, porque queremos que cualquiera pueda ser parte de la comunidad. Elegí la opción que se adecue a tu consumo, podes cambiar tu preferencia en cualquier momento!</p>
+
+            <div class="box">
+                <img src="/images/step-2.svg" alt="">
+                <h3>Elegí tu método de pago</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, ducimus.</p>
+                <a href="#" class="btn">read more</a>
             </div>
+
+            <div class="box">
+                <img src="/images/step-3.svg" alt="">
+                <h3>¡Disfrutá!</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, ducimus.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
         </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="/images/default.png" alt="">
-            </div>
-            <div class="content">
-                <a href="#" class="title">Recibilo en tu hogar</a>
-                <p>Todos los meses una selección de las mejores yerbas llegará a tu casa. Cada entrega será particular, podrás conocer los distintos orígenes y variedades, y compartir tu experiencia con el resto de los miembros del Club.</p>
-            </div>
+    </section>
+
+    <!-- steps section ends -->
+
+    <!-- faq section starts  -->
+
+    <section class="faq" id="faq">
+
+        <div class="heading">
+            <span>¿?</span>
+            <h1>Preguntas Frecuentes</h1>
         </div>
 
-    </div>
+        <div class="accordion-container">
 
-</section>
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>¿Cómo puedo comprar?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, non labore omnis odit sapiente a
+                    mollitia quisquam ad culpa, dignissimos excepturi unde pariatur voluptatem magni amet suscipit. Ea,
+                    unde error.
+                </p>
+            </div>
 
-<!-- blogs section ends -->
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>¿Hacen envíos a todo el país?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, non labore omnis odit sapiente a
+                    mollitia quisquam ad culpa, dignissimos excepturi unde pariatur voluptatem magni amet suscipit. Ea,
+                    unde error.
+                </p>
+            </div>
 
-<!-- home section starts  -->
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>¿Puedo devolver un producto?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, non labore omnis odit sapiente a
+                    mollitia quisquam ad culpa, dignissimos excepturi unde pariatur voluptatem magni amet suscipit. Ea,
+                    unde error.
+                </p>
+            </div>
 
-<section class="suscribe">
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>¿Cuántos días tardan en llegar?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, non labore omnis odit sapiente a
+                    mollitia quisquam ad culpa, dignissimos excepturi unde pariatur voluptatem magni amet suscipit. Ea,
+                    unde error.
+                </p>
+            </div>
 
-    <div class="content">
-        <h3>Unite</h3>
-        <p>Recibí la mejor materia prima</p>
-        <a href="/suscripciones" class="btn">Suscribite</a>
-    </div>
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>¿Tienen sucursales?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, non labore omnis odit sapiente a
+                    mollitia quisquam ad culpa, dignissimos excepturi unde pariatur voluptatem magni amet suscipit. Ea,
+                    unde error.
+                </p>
+            </div>
 
-</section>
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>¿Puedo mandar un regalo?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, non labore omnis odit sapiente a
+                    mollitia quisquam ad culpa, dignissimos excepturi unde pariatur voluptatem magni amet suscipit. Ea,
+                    unde error.
+                </p>
+            </div>
 
-<!-- home section ends -->
+        </div>
 
-<!-- footer section starts  -->
-<footer>
-<section class="footer">
+    </section>
 
-    <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-        <a href="#" class="fab fa-pinterest"></a>
-    </div>
+    <!-- faq section ends -->
 
-    <div class="credit">created by <span>Alphas</span> | all rights reserved</div>
+    <!-- Contacto -->
+    <section class="newsletter">
+        <div class="content">
+            <h3><span class="line-down">Suscribite</span> y recibí las novedades</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veniam odit repellat nostrum eius quaerat
+                dolor, dolore possimus nihil optio?</p>
+            <form action="">
+                <input type="email" name="" placeholder="Escribi tu email" id="" class="email">
+                <input type="submit" value="Enviar" class="btn">
+            </form>
+            <p>¿Ya tenes una cuenta? <a href="#">Entrá</a></p>
+        </div>
+    </section>
+    <!-- Contacto -->
 
-</section>
-</footer>
+    <%- include('./partials/footer') %>
 
-<!-- footer section ends -->
+    <!-- custom js file link  -->
+    <script src="/validationsFront/validacionesHome.js"></script>
+
 </body>
