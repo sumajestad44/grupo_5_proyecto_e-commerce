@@ -8,8 +8,7 @@ const User = require('../models/User');
 const { redirect } = require('express/lib/response');
 const db = require('../database/models');
 const { resolveNaptr } = require('dns');
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const allUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
 
 let usersController = {
     login: (req, res) => {

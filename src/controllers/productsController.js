@@ -18,11 +18,10 @@ const controller = {
     return res.render("productCart");
   },
   productDetail: (req, res) => {
-    db.Products.findByPk(req.params.id).then(function (product) {
-      res.render("productDetail", { product: product });
-    });
-  },
-  
+  db.Products.findByPk(req.params.id).then(function (product) {
+    res.render("productDetail", { product: product });
+  });
+},
 
   /* 	subs:(req, res) => {
 		return res.render('subs');
