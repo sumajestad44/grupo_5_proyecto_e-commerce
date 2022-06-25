@@ -170,6 +170,7 @@ let usersController = {
 
     // ELIMINAR UN USUARIO DE LA BASE DE DATOS
     destroy : (req, res) => {
+        
 		db.Users.destroy({
             where:{
                 id: req.params.id
@@ -184,7 +185,7 @@ let usersController = {
             console.log(errors);
         })
 		
-		},
+		}, 
 
 
      profile: (req,res) => {

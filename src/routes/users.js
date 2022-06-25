@@ -50,7 +50,7 @@ router.get('/edit/:id', usersController.edit)
 router.post('/edit/:id', upload.single('image'), usersController.update)
 
 // Eliminar un usuario de la base de datos
-router.delete('/delete/:id', usersController.destroy);
+router.post('/delete/:id', usersController.destroy);
 
 // Perfil de usuario
 router.get('/profile', authMiddleware, usersController.profile);
