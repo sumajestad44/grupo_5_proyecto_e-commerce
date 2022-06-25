@@ -3,8 +3,8 @@ window.addEventListener('load', ()=>{
    let email = document.querySelector('#email')
    let password = document.querySelector('#password')
 
-   email.addEventListener('keypress', (e)=>{
+  
         
        
-   })
+  
 })

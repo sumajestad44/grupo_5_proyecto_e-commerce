@@ -19,9 +19,7 @@
     <div class="product">
         <div class="text-detail">
             <h2><%=product.name%></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Quo aperiam corporis, natus aliquam sit omnis labore quam eius autem temporibus
-             laudantium praesentium illo aspernatur eos eligendi aliquid excepturi quas ex!</p> 
+            <p><%=product.description%></p> 
         </div>
         <div class="select-weight">
             <p>$ <%=product.price%></p><select name="" class="weight"> 
@@ -42,7 +40,7 @@
         <% } %>
     </div>
 </div>  
-<hr class="hr-detail">
+<!-- <hr class="hr-detail">
     <div class="similar">
         <h2>Productos similares</h2>
         <div class="img-similar">
@@ -51,7 +49,7 @@
           <img src="/images/default-image.jpg">
           <img src="/images/default-image.jpg">
         </div>
-    </div>
+    </div> -->
 </main>
 
 <%- include('./partials/footer') %> 
