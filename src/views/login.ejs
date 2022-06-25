@@ -18,7 +18,12 @@
                     </div>
                    <% } %>
                 <label for="password">Contraseña </label>
-                <input type="password" name="password" id="password" minlength="8" required placeholder="TierraMate123"> 
+                <input type="password" name="password" id="password" minlength="8" required placeholder="TierraMate123">
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %> 
+                    </div>
+                   <% } %>
             </div>
             <div class="container-login">
                 <div class="recordarUsuario">

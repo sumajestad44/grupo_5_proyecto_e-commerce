@@ -55,4 +55,7 @@ main {
 .recordarUsuario{
     flex-direction: row;
 }
-
+.text-danger{
+    color: red;
+    padding-bottom: 5px;
+}

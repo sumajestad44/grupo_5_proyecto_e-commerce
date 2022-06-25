@@ -15,12 +15,12 @@ module.exports = [
 			return true;
 		}
 	}),
-    /* body('image').custom((value, { req }) => {
-		if (req.files[0] == undefined) {
+    /*  body('image').custom((value, { req }) => {
+		if (req.files == undefined) {
 			return true;
 		  }
-		  if (req.files[0]) {
-			let file = req.files[0];
+		  if (req.files) {
+			let file = req.files;
 			let acceptedExtensions = [".jpg",".jpeg", ".png", ".gif"];
 			let fileExtension = path.extname(file.originalname);
 			if (!acceptedExtensions.includes(fileExtension)) {
@@ -32,7 +32,7 @@ module.exports = [
 			}
 			return true;
 		  }
-		}), */
+		}) */
 
 ]
 

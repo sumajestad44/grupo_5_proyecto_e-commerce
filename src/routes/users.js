@@ -43,7 +43,7 @@ router.post('/login', usersController.loginProcess);
 router.get('/register', guestMiddleware, usersController.register);
 
 // Procesamiento de formulario de registro
-router.post('/register', upload.single('image'), /* validateRegisterMiddleware, */ usersController.store);
+router.post('/register', upload.single('image'), validateRegisterMiddleware,  usersController.store);
 
 // Edición de usuario
 router.get('/edit/:id', usersController.edit)
