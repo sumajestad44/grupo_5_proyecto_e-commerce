@@ -17,12 +17,10 @@ const controller = {
     return res.render("productCart");
   },
   productDetail: (req, res) => {
-    let id = req.params.id;
-    let product = products.find((product) => product.id == id);
-    res.render("productDetail", {
-      product,
-    });
-  },
+  db.Products.findByPk(req.params.id).then(function (product) {
+    res.render("productDetail", { product: product });
+  });
+},
 
   /* 	subs:(req, res) => {
 		return res.render('subs');
