@@ -28,26 +28,27 @@ let usersController = {
                 oldData: req.body,
             })
         }
-        db.Users.findAll().then((users) => {
-            let userInDB = users.find((i) => i.email == req.body.email)
+        db.Users.findAll().then((user) => {
+            let userInDB = user.find((i) => i.email == req.body.email);
+            console.log(userInDB);
             if (userInDB) {
-              return res.render('register', {
-                errors: {
-                  email: {
-                    msg: 'Este email ya está registrado',
-                  },
-                },
-                oldData: req.body,
-              })
+                return res.render('register', {
+                    errors: {
+                        email: {
+                            msg: 'Este email ya está registrado',
+                        },
+                    },
+                    oldData: req.body,
+                })
             }
         })
 
-        let image = req.file;
-        if (req.file != undefined) {
-            image = req.file.filename
-        } else {
-            image = 'default-user.png'
-        };
+        let image = req.file
+		if(req.file != undefined){
+			image = req.file
+		} else {
+			image = 'default-user.png'
+		};
         category = "User";
         db.Users.create({
             name: req.body.first_name,
@@ -56,8 +57,10 @@ let usersController = {
             password: bcrypt.hashSync(req.body.password, 10),
             category: "User",
             image: image
-        }),
-        res.render("users/usersProfile")
+        })
+        .then(() => {
+            return res.redirect('/users/profile')
+          })
 
     },
 
@@ -95,17 +98,17 @@ let usersController = {
 
         const resultValidation = validationResult(req)
         if (resultValidation.errors.length > 0) {
-          return res.render('login', {
-            //mapped convierte un array en objeto literal
-            errors: resultValidation.mapped(),
-            oldData: req.body,
-          })
+            return res.render('login', {
+                //mapped convierte un array en objeto literal
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            })
         }
 
         db.Users.findAll()
-            .then(function (users) {
+        .then(function (user) {
 
-                let userLogin = users.find((i) => i.email == req.body.email);
+            let userLogin = user.find((i) => i.email == req.body.email);
 
                 if (userLogin) {
                     let isOkThePassword = bcrypt.compareSync(req.body.password, userLogin.password)
@@ -119,20 +122,28 @@ let usersController = {
 
                         return res.redirect('/users/profile');
                     }
+                    return res.render('login', {
+                        errors: {
+                            password: {
+                                msg: 'Contraseña incorrecta'
+                            },
+                        }
+                    });
                 }
-
                 return res.render('login', {
                     errors: {
-                        email: {
+                        email:{
                             msg: 'No se encuentra este email'
-                        },
-                        password: {
-                            msg: 'Contraseña incorrecta'
                         }
                     }
-                });
-            })
+                })
+
+        })
     },
+
+
+
+
     edit: (req, res) => {
         db.Users.findByPk(req.params.id)
             .then((user) => {
@@ -143,6 +154,7 @@ let usersController = {
     update: (req, res) => {
 
         const resultValidation = validationResult(req)
+        
         const id = req.params.id
 
         db.Users.findByPk(id)
