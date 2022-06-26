@@ -11,6 +11,7 @@ const {body} = require('express-validator');
 
 // MIDDLEWARES
 const validateRegisterMiddleware = require('../middlewares/validateRegisterMiddleware');
+const validateLoginMiddleware = require('../middlewares/validateLoginMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
@@ -37,7 +38,7 @@ var upload= multer({
 router.get('/login', guestMiddleware, usersController.login);
 
 // Procesamiento de formulario de login
-router.post('/login', usersController.loginProcess);
+router.post('/login', validateLoginMiddleware, usersController.loginProcess);
 
 // Register
 router.get('/register', guestMiddleware, usersController.register);
