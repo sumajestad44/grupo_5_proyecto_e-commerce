@@ -15,7 +15,7 @@ module.exports = [
 			return true;
 		}
 	}),
-	body('image').custom((value, { req }) => {
+	/* body('image').custom((value, { req }) => {
 		if (req.file == undefined) {
 			return true;
 		}
@@ -31,7 +31,7 @@ module.exports = [
 				);
 			}
 		}
-	})
+	}) */
 
 ]
 

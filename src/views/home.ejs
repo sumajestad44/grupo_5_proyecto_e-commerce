@@ -15,7 +15,86 @@
 
 </head>
 <body>
-    <%- include('./partials/header') %>
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="/" class="logo"> Tierra Mate </a>
+
+        <nav class="navbar">
+            <a href="/">home</a>
+            <a href="/products">shop</a>
+            <a href="#">about</a>
+            <a href="#">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <a href="/products/cart">
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+            </a>
+            <% if (!locals.userLogged) { %>
+               <div id="login-btn" class="fas fa-user"></div>
+            <% } %>
+            <% if (locals.userLogged) { %>
+             <a href="/users/profile"><div id="login-btn" class="fas fa-user"></div></a>
+            <% } %>
+        </div>
+
+        <!-- <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="/img/cart-1.jpg" alt="">
+                <div class="content">
+                    <h3>organic food</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">$18.99</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="/img/cart-2.jpg" alt="">
+                <div class="content">
+                    <h3>organic food</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">$18.99</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="/img/cart-3.jpg" alt="">
+                <div class="content">
+                    <h3>organic food</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">$18.99</span>
+                </div>
+            </div>
+            <h3 class="total"> total : <span>56.97</span> </h3>
+            <a href="#" class="btn">checkout cart</a>
+        </div> -->
+        <% if (!locals.userLogged) { %>
+        <form action="/users/login" class="login-form" method="POST">
+            <h3>Ingresa</h3>
+            <input type="email" placeholder="Escribi tu email" class="box">
+            <input type="password" placeholder="Escribi tu contraseña" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">Recuerdame</label>
+            </div>
+            <input type="submit" value="Iniciar" class="btn">
+            <p>¿Olvidaste tu contraseña? <a href="#">Clickea aca</a></p>
+            <p>¿No tenes cuenta? <a href="/users/register">Crea una</a></p>
+        </form>
+        <% } %>
+
+
+    </header>
+
+    <!-- header section ends -->
+
 
     <!-- home section starts -->
     <section class="home">

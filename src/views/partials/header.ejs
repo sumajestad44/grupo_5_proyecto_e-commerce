@@ -2,19 +2,23 @@
 
     <header class="header">
 
-        <a href="home.ejs" class="logo"> Tierra Mate </a>
+        <a href="/" class="logo"> Tierra Mate </a>
 
         <nav class="navbar">
-            <a href="home.ejs">home</a>
-            <a href="#">shop</a>
+            <a href="/">home</a>
+            <a href="/products">shop</a>
             <a href="#">about</a>
             <a href="#">contact</a>
         </nav>
 
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
+            <a href="/products/cart">
             <div id="cart-btn" class="fas fa-shopping-cart"></div>
+            </a>
+            <a href="/users/profile">
             <div id="login-btn" class="fas fa-user"></div>
+            </a>
         </div>
 
         <!-- <div class="shopping-cart">
@@ -52,7 +56,7 @@
             <a href="#" class="btn">checkout cart</a>
         </div> -->
 
-        <form action="" class="login-form">
+        <form action="/users/login" class="login-form" method="POST">
             <h3>Ingresa</h3>
             <input type="email" placeholder="Escribi tu email" class="box">
             <input type="password" placeholder="Escribi tu contraseña" class="box">
@@ -62,7 +66,7 @@
             </div>
             <input type="submit" value="Iniciar" class="btn">
             <p>¿Olvidaste tu contraseña? <a href="#">Clickea aca</a></p>
-            <p>¿No tenes cuenta? <a href="#">Crea una</a></p>
+            <p>¿No tenes cuenta? <a href="/users/register">Crea una</a></p>
         </form>
 
     </header>
