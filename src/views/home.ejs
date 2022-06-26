@@ -78,10 +78,20 @@
         <% if (!locals.userLogged) { %>
         <form action="/users/login" class="login-form" method="POST">
             <h3>Ingresa</h3>
-            <input type="email" placeholder="Escribi tu email" class="box">
-            <input type="password" placeholder="Escribi tu contraseña" class="box">
+            <input type="email" placeholder="Escribi tu email" class="box" name="email" id="email">
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %> 
+                </div>
+               <% } %>
+            <input type="password" placeholder="Escribi tu contraseña" class="box" name="password" id="password">
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %> 
+                </div>
+               <% } %>
             <div class="remember">
-                <input type="checkbox" name="" id="remember-me">
+                <input type="checkbox" name="recordarUsuario" id="recordarUsuario">
                 <label for="remember-me">Recuerdame</label>
             </div>
             <input type="submit" value="Iniciar" class="btn">
