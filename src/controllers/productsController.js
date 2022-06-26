@@ -9,7 +9,8 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
   home: (req, res) => {
-    db.Products.findAll().then(function (products) {
+    db.Products.findAll()
+    .then(function (products) {
       return res.render("home");
     });
   },
@@ -40,13 +41,17 @@ const controller = {
       price: req.body.price,
       image: req.file.filename,
       size: req.body.size,
-    });
-    res.redirect("/products");
+    })
+    .then(()=>{
+      res.redirect("/products");
+    })
+    
   },
 
   // Actualizar - Formulario para editar
   edit: (req, res) => {
-    db.Products.findByPk(req.params.id).then(function (product) {
+    db.Products.findByPk(req.params.id)
+    .then(function (product) {
       res.render("product-edit-form", { product: product });
     });
   },
