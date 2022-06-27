@@ -30,7 +30,6 @@ let usersController = {
         }
         db.Users.findAll().then((user) => {
             let userInDB = user.find((i) => i.email == req.body.email);
-            console.log(userInDB);
             if (userInDB) {
                 return res.render('register', {
                     errors: {
@@ -40,28 +39,30 @@ let usersController = {
                     },
                     oldData: req.body,
                 })
+            } else {
+                let image = req.file;
+                if(req.file != undefined){
+                    image = req.file.filename
+                } else {
+                    image = 'default-user.png'
+                };
+                category = "User";
+                db.Users.create({
+                    name: req.body.first_name,
+                    lastName: req.body.last_name,
+                    email: req.body.email,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                    category: "User",
+                    image: image
+                })
+                .then(() => {
+                    return res.redirect('/users/profile')
+                })
+                    .catch((error) => {
+                    console.log(error);
+                })
             }
         })
-
-        let image = req.file;
-		if(req.file != undefined){
-			image = req.file.filename
-		} else {
-			image = 'default-user.png'
-		};
-        category = "User";
-        db.Users.create({
-            name: req.body.first_name,
-            lastName: req.body.last_name,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
-            category: "User",
-            image: image
-        })
-        .then(() => {
-            return res.redirect('/users/profile')
-          })
-
     },
 
 
