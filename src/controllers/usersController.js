@@ -57,7 +57,7 @@ let usersController = {
             category: "User",
             image: image
         }),
-        res.render("users/usersProfile")
+        res.redirect("/users/login")
 
     },
 

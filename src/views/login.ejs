@@ -9,6 +9,10 @@
     
     <main class="login">
         <form action="/users/login" method="POST" class="loginForm">
+            <div class="errors">
+                <ul>
+                </ul>
+            </div>
             <div class="datos-usuario-login">
                 <label for="nombre">Email </label>
                 <input type="email" name="email" id="email"  placeholder="Tierra@Mate.com">
@@ -47,8 +51,8 @@
 <footer>
  <%- include('./partials/footer') %> 
 </footer>
-<script src="/validationsFront/validationLogin.js">
 
+<script src="/validationsFront/validationLogin.js">
 </script>
     
 </body>

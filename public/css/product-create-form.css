@@ -61,3 +61,13 @@ label{
     background: rgba(0, 116, 217, .2);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
+
+.errors {
+    display: flex;
+    justify-content: center;
+    font-size: var(--text-lg);
+}
+
+.errors ul {
+    list-style-type: none;
+}
