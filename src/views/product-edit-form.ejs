@@ -17,10 +17,20 @@
             <div class="update-product"> 
 
                 <label for="name">Nombre del producto: </label>
-                <input type="text" id="name" name="name" value="<%=product.name%>" required minlength="5">
+                <input type="text" id="name" name="name" value="<%=product.name%>">
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-danger">
+                       <%= errors.name.msg %>
+                    </div>
+                   <% } %>
 
                 <label for="description">Descripción: </label>
                 <textarea name="description" id="description" minlength="20" maxlength="255"><%=product.description%></textarea>
+                <% if (locals.errors && errors.description) { %>
+                    <div class="text-danger">
+                       <%= errors.description.msg %>
+                    </div>
+                   <% } %>
             
 
                 <label for="category">Categoría:</label>
@@ -31,12 +41,27 @@
                     <option value="Bombilla">Bombilla</option>
                     <option value="Termo">Termo</option>
                 </select>
+                <% if (locals.errors && errors.category) { %>
+                    <div class="text-danger">
+                       <%= errors.category.msg %>
+                    </div>
+                   <% } %>
 
                 <label for="price">Precio:</label>
                 <input type="text" id="price" name="price" value="<%=product.price%>">
+                <% if (locals.errors && errors.price) { %>
+                    <div class="text-danger">
+                       <%= errors.price.msg %>
+                    </div>
+                   <% } %>
 
                 <label for="image">Imágen del producto:</label>
                 <input type="file" name="image" id="image">
+                <% if (locals.errors && errors.image) { %>
+                    <div class="text-danger">
+                       <%= errors.image.msg %>
+                    </div>
+                   <% } %>
             </div>
                 <div class="update">
                     <button type="submit" class="button-update">Guardar producto</button>

@@ -92,3 +92,7 @@ label{
 .errors ul {
     list-style-type: none;
 }
+
+    .text-danger{
+    color: red;
+}
