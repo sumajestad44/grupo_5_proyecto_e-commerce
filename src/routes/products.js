@@ -24,7 +24,7 @@ router.post('/create', upload.single('image'), productCreateMiddleware, products
 
 /*** EDITAR UN PRODUCTO ***/
 router.get('/edit/:id',  adminMiddleware,  productsController.edit);
-router.post('/edit/:id', upload.single('image'), productEditMiddleware, productsController.update);
+router.put('/edit/:id', upload.single('image'), productEditMiddleware, productsController.update);
 
 /*** BORRAR UN PRODUCTO ***/
 router.post('/delete/:id', productsController.destroy);

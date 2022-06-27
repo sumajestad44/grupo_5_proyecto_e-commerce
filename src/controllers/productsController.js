@@ -38,7 +38,7 @@ const controller = {
     const resultValidation = validationResult(req)
 
     if (resultValidation.errors.length > 0) {
-      return res.render('product-create-form', {
+      return res.render('products/create', {
         //mapped convierte un array en objeto literal
         errors: resultValidation.mapped(),
         oldData: req.body,
@@ -81,37 +81,38 @@ const controller = {
 
   // Actualizar - Método para actualizar
   update: (req, res) => {
-
-    const resultValidation = validationResult(req)
-    const id = req.params.id
-
-    db.Products.findByPk(id)
-      .then((product) => {
-         if (resultValidation.errors.length > 0) {
-          return res.render('product-edit-form' , {
-            //mapped convierte un array en objeto literal
-            errors: resultValidation.mapped(),
-            oldData: req.body,
-          })
-          } 
-        db.Products.update(
-          {
-            name: req.body.name,
-            description: req.body.description,
-            category: req.body.category,
-            price: req.body.price,
-            image: req.file == undefined ? product.image : req.file.filename,
-            size: req.body.size,
+    const resultValidation = validationResult(req);
+    const id = req.params.id;
+    db.Products.findByPk(id).then((product) => {
+      if (resultValidation.errors.length > 0) {
+        return res.render("product-edit-form", {
+          //mapped convierte un array en objeto literal
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+        });
+      }
+      db.Products.update(
+        {
+          name: req.body.name || product.name,
+          description: req.body.description || product.description,
+          category: req.body.category || product.category,
+          price: req.body.price || product.price,
+          image: req.file == undefined ? product.image : req.file.filename,
+          size: req.body.size || product.size,
+        },
+        {
+          where: {
+            id: id,
           },
-          {
-            where: {
-              id: id,
-            },
-          })
-          .then(() => {
-            res.redirect("/products");
-          });
-      })
+        }
+      )
+        .then(() => {
+          return res.redirect("/products");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
   },
 
   // Borrar un producto
