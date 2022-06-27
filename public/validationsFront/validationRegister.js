@@ -33,7 +33,7 @@ if (errors.length > 0) {
     e.preventDefault();
     let ulErrors = document.querySelector('div.errors ul')
     for (let i = 0; i < errors.length; i++) {
-        ulErrors.innerHTML += '<li style="color: green">' + errors[i] +'</li>'
+        ulErrors.innerHTML += '<li style="color: #bac34e">' + errors[i] +'</li>'
         
     }
 }

@@ -1,4 +1,4 @@
-@import url('home.css');
+
 @import url('normalize.css');
 main {
     width: 90%;
@@ -9,6 +9,7 @@ main {
 .login{
     padding-top: 1.6em;
     background-color: var(--white-grey);
+    /* background-image: url('/images/foto-fondo.jpeg'); */
     height: 100%;
     margin-top: 100px;
 }
