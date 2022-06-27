@@ -19,17 +19,16 @@ module.exports = [
 		let file = req.file;
 		let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
 		if (!file) {
-			console.log(file);
-			return true;
-		}
-		let fileExtension = path.extname(file.originalname);
-		if (!acceptedExtensions.includes(fileExtension)) {
-			throw new Error(
-				`Las extensiones de archivo permitidas son ${acceptedExtensions.join(
-					", "
-				)}`,
-			);
-		}
+			return true
+		  } else {
+			let fileExtension = path.extname(file.originalname)
+			if (!acceptedExtensions.includes(fileExtension)) {
+			  throw new Error(
+				`Las extensiones aceptadas son ${acceptedExtensions.join(',')}`,
+			  )
+			}
+		  }
+		  return true
 	})
 
 ]
