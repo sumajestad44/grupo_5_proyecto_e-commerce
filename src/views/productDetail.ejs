@@ -21,15 +21,18 @@
             <h2><%=product.name%></h2>
             <p><%=product.description%></p> 
         </div>
-        <div class="select-weight">
-            <p>$ <%=product.price%></p><select name="" class="weight"> 
-                        <option value="none"> Seleccionar peso</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-            <input type="submit" value="Agregar al carrito" class="button-detail">
-        </div>
+        <% if (locals.product.category == "Yerba") { %>
+            <div class="select-weight">
+                <p>$ <%=product.price%></p><select name="" class="weight"> 
+                            <option value="none"> Seleccionar peso</option>
+                            <option value="300g">300g</option>
+                            <option value="500g">500g</option>
+                            <option value="1kg">1kg</option>
+                        </select>
+            </div>
+        <% } %>
+            <input type="submit" class="select-weight" value="Agregar al carrito" class="button-detail">
+    
         <% if (locals.userLogged) { %>
             <% if (locals.userLogged.category == "Admin") { %>
                 <a href="/products/edit/<%= product.id %>">

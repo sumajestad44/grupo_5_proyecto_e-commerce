@@ -26,31 +26,12 @@
             <div class="items">
                 <div class="cart-items">
                     <div class="image">
-                        <img src="/images/default-image.jpg" alt="Photo">
+                        <img src="/images/products/<%=product.image%>">
                     </div>
                     <div class="about">
-                        <h1 class="product-title">YERBA MATE</h1>
-                        <h3 class="product-subtitle">500gr</h3>
-                        <b><div class="amount">$10</div></b>
-                    </div>
-                </div>
-                <div class="counter">
-                    <div class="button">-</div>
-                    <div class="count">1</div>
-                    <div class="button">+</div>
-                </div>
-                <div class="remove">Quitar</div>
-            </div>
-
-            <div class="items">
-                <div class="cart-items">
-                    <div class="image">
-                        <img src="/images/default-image.jpg" alt="Photo">
-                    </div>
-                    <div class="about">
-                        <h1 class="product-title">YERBA MATE</h1>
-                        <h3 class="product-subtitle">500gr</h3>
-                        <b><div class="amount">$10</div></b>
+                        <h1 class="product-title"><%=product.name%></h1>
+                        <h3 class="product-subtitle"><%=product.size%></h3>
+                        <b><div class="amount">$<%=product.price%></div></b>
                     </div>
                 </div>
                 <div class="counter">
@@ -78,7 +59,7 @@
                 <div>
                     <div class="sub-total">
                         <p>Subtotal</p>
-                        <p>$10</p>
+                        <p>$<%=product.price%></p>
                     </div>
     
                     <div class="shipping">

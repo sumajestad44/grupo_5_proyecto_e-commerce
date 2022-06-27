@@ -16,7 +16,10 @@ const controller = {
       });
   },
   productCart: (req, res) => {
-    return res.render("productCart");
+    db.Products.findAll().then(function (product) {
+      res.render("productCart", { product });
+    });
+    
   },
   productDetail: (req, res) => {
     db.Products.findByPk(req.params.id).then(function (product) {
