@@ -164,6 +164,7 @@ let usersController = {
                 db.Users.update({
                     name: req.body.first_name,
                     lastName: req.body.last_name,
+                    password: bcrypt.hashSync(req.body.password, 10),
                     email: req.body.email,
                     image: req.file == undefined ? user.image : req.file.filename
                 }, {
@@ -175,6 +176,7 @@ let usersController = {
                     id: id,
                     name: req.body.first_name,
                     lastName: req.body.last_name,
+                    password: bcrypt.hashSync(req.body.password, 10),
                     email: req.body.email,
                     category: user.category,
                     image: req.file == undefined ? user.image : req.file.filename

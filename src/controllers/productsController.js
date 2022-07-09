@@ -41,7 +41,7 @@ const controller = {
     const resultValidation = validationResult(req)
 
     if (resultValidation.errors.length > 0) {
-      return res.render('products/create', {
+      return res.render('product-create-form', {
         //mapped convierte un array en objeto literal
         errors: resultValidation.mapped(),
         oldData: req.body,
@@ -107,7 +107,7 @@ const controller = {
           where: {
             id: id,
           },
-        }
+}
       )
         .then(() => {
           return res.redirect("/products");
